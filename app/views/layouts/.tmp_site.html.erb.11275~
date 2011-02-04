@@ -24,7 +24,7 @@
     <%= yield :head %>
     <title><%= t 'layouts.project_name.title' %><%= ' | '+ h(@title) if @title %></title>
   </head>
-  <body>
+  <body  onload="init()";>
 
     <div id="content">
       <% if flash[:error] %>

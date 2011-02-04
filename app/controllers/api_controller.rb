@@ -314,4 +314,78 @@ class ApiController < ApplicationController
 
     render :text => doc.to_s, :content_type => "text/xml"
   end
+  
+    def ontosearch
+
+    doc = XML::Document.new
+    doc.encoding = XML::Encoding::UTF_8
+    root = XML::Node.new 'gpx'
+    root['version'] = '1.1'
+    root['creator'] = 'OpenDataMap.ca 2.0_beta4'
+    root['xmlns'] = "http://www.topografix.com/GPX/1/0/"
+
+    doc.root = root
+
+    cids = params[:class].split(',')
+    om = OntologyMapping.find_by_name("activities2tags")
+
+    cids.each do |cid|
+    c = OntologyClass.find_by_id(cid.to_i)
+
+    minlon = params[:minlon].to_f
+    minlat = params[:minlat].to_f
+    maxlon = params[:maxlon].to_f
+    maxlat = params[:maxlat].to_f
+
+    min_lon, min_lat, max_lon, max_lat = sanitise_boundaries([minlon,minlat, maxlon, maxlat])
+    # check boundary is sane and area within defined
+    # see /config/application.yml
+    begin
+      check_boundaries(min_lon, min_lat, max_lon, max_lat)
+    rescue Exception => err
+      report_error(err.message)
+      return
+    end
+
+    # get all the points
+
+    for sub in c.descendants.select{|x| x.safe_iconfile!="question-mark.png"} # .select{|x| x.interesting(om)}
+      search = om.nodetags_search(sub) # different queries
+      if search.nil? 
+        nts = []
+      else  
+        key = search.first[0]
+        val = search.first[1]
+        # get nodetags for class sub whose nodes are within the bounds
+        # TODO: perhaps get all nodetags for all classes at once? 
+        nts = NodeTag.find(:all,:conditions=>OSM.sql_for_area(minlat, minlon, maxlat, maxlon,"current_nodes.")+" AND (\"current_node_tags\".\"#{key}\" = '#{val}')",:include=>"node")
+      end
+      for nt in nts 
+         elem = XML::Node.new 'wpt'
+         elem['lat'] = nt.node.lat.to_s
+         elem['lon'] = nt.node.lon.to_s
+         doc.root << elem
+
+         name_tag = nt.node.tags["name"]
+         ename = (XML::Node.new('name') << if name_tag.nil? then "" else name_tag end)
+         elem << ename
+
+         street_tag = nt.node.tags["addr:street"]
+         street = if street_tag.nil? then "" else street_tag end
+         housenumber_tag = nt.node.tags["addr:housenumber"]
+         housenumber = if housenumber_tag.nil? then "" else housenumber_tag end
+         city_tag = nt.node.tags["addr:city"]
+         city = if city_tag.nil? then "" else city_tag end
+         desc = (XML::Node.new('desc') << "#{street} #{housenumber} <br> #{city}")
+         elem << desc
+
+         sym = (XML::Node.new('sym') << sub.safe_iconfile) 
+         elem << sym
+      end
+    end
+    end
+   
+    render :text => doc.to_s, :content_type => "text/xml"
+  end
+
 end

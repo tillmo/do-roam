@@ -5,6 +5,12 @@ class SiteController < ApplicationController
   before_filter :set_locale
   before_filter :require_user, :only => [:edit]
 
+  def index
+    @om = OntologyMapping.find_by_name("activities2tags")
+    @o = @om.source
+    @classes = if params[:class].nil? then [] else params[:class].keys end
+  end
+
   def export
     render :action => 'index'
   end

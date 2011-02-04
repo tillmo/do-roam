@@ -1,0 +1,16 @@
+  488  sudo apt-get install ruby rdoc ri irb libxml2-dev libxslt1-dev ruby-dev apache2-threaded-dev libmagickwand-dev build-essential libopenssl-ruby subversion apache2 postgresql postgresql-contrib
+  489  sudo gem install activerecord-postgresql-adapter
+  490  sudo apt-get install postgresql-contrib libpq-dev
+  491  ps -aef |grep server
+  492  cd web2.0/
+  493  cat */config/ports
+  494  sudo emacs /etc/apache2/sites-available/communtu.conf
+  495  sudo -s
+  496  sudo gem install pg
+  497  sud gem install libxml-ruby
+  498  sudo gem install libxml-ruby
+  499  sudo gem install rmagick
+  500  sudo gem install oauth oauth-plugin httpclient SystemTimer sanitize 
+  501  sudo gem install i180 --version=0.4.1
+  502  sudo gem install i18n --version=0.4.1
+  503  sudo gem update

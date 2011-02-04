@@ -5,7 +5,7 @@
 <% end %>
 
 <%= render :partial => 'sidebar', :locals => { :onopen => "resizeMap();", :onclose => "resizeMap();" } %>
-<%= render :partial => 'doroam' %>
+<%= render :partial => 'key' %>
 <%= render :partial => 'search' %>
 
 <noscript>
@@ -132,9 +132,6 @@ end
       map.dataLayer = new OpenLayers.Layer("<%= I18n.t 'browse.start_rjs.data_layer_name' %>", { "visibility": false });
       map.dataLayer.events.register("visibilitychanged", map.dataLayer, toggleData);
       map.addLayer(map.dataLayer);
-
-      markers = new OpenLayers.Layer.Markers("Points of Interest");
-      map.addLayer(markers);
     <% end %>
 
     <% unless object_zoom %>
@@ -234,8 +231,7 @@ end
     <% end %>
 
     updatelinks(lonlat.lon, lonlat.lat, zoom, layers, extents.left, extents.bottom, extents.right, extents.top, objtype, objid);
-    moveend_listener();
-	
+
     expiry.setYear(expiry.getFullYear() + 10);
     document.cookie = "_osm_location=" + lonlat.lon + "|" + lonlat.lat + "|" + zoom + "|" + layers + "; expires=" + expiry.toGMTString();
   }
@@ -258,7 +254,7 @@ end
       sidebar_width = sidebar_width + 5
     }
 
-    $("map").style.left = (sidebar_width)  + "px";
+    $("map").style.left = (sidebar_width) + "px";
     $("map").style.width = ($("content").offsetWidth - sidebar_width) + "px";
     $("map").style.height = ($("content").offsetHeight - 2) + "px";
 

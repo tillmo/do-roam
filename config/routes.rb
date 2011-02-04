@@ -43,6 +43,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect "api/#{API_VERSION}/relations", :controller => 'relation', :action => 'relations', :id => nil
 
   map.connect "api/#{API_VERSION}/map", :controller => 'api', :action => 'map'
+  map.connect "api/#{API_VERSION}/ontosearch", :controller => 'api', :action => 'ontosearch'
   
   map.connect "api/#{API_VERSION}/trackpoints", :controller => 'api', :action => 'trackpoints'
 

@@ -6,12 +6,6 @@
     <%= javascript_include_tag 'prototype' %>
     <%= javascript_include_tag 'site' %>
     <%= javascript_include_tag 'menu' %>
-	<%= javascript_include_tag 'jquery-1.4.2.min.js' %>
-     <script type="text/javascript">
-        jQuery.noConflict();
-        var $j = jQuery;
-     </script>
-
     <!--[if lt IE 7]><%= javascript_include_tag 'pngfix' %><![endif]--> <!-- thanks, microsoft! -->
     <%= stylesheet_link_tag 'common' %>
     <!--[if IE]><%= stylesheet_link_tag 'large', :media => "screen" %><![endif]--> <!-- IE is totally broken with CSS media queries -->
@@ -25,7 +19,6 @@
     <title><%= t 'layouts.project_name.title' %><%= ' | '+ h(@title) if @title %></title>
   </head>
   <body>
-
     <div id="content">
       <% if flash[:error] %>
         <div id="error"><%= flash[:error] %></div>
@@ -95,7 +88,6 @@
 
     <div id="left">
 
-      <% if false %>
       <div id="logo">
         <center>
           <h1><%= t 'layouts.project_name.h1' %></h1>
@@ -104,6 +96,7 @@
         </center>
       </div>
 
+      <% unless @user %>
       <div id="intro">
         <p>
           <%= t 'layouts.intro_1' %>
@@ -117,13 +110,8 @@
               :bytemark => link_to(t('layouts.intro_3_bytemark'), "http://www.bytemark.co.uk"),
               :partners => link_to(t('layouts.intro_3_partners'), t('layouts.intro_3_partners_url')) %>
         </p>
-       </div>
-      <% end %>
-
-
-      <div id="logo_small">
-      	<big>DO-ROAM</big>
       </div>
+      <% end %>
 
       <% if STATUS == :database_offline or STATUS == :api_offline %>
       <div id="alert">
@@ -139,19 +127,26 @@
       <div id="donate" class="notice">
         <%= t 'layouts.donate', :link => "<a href=\"http://donate.openstreetmap.org/\">#{t('layouts.donate_link_text')}</a>" %>
       </div>
- 
+      <% end %>
+
+      <div id="left_menu" class="left_menu">
+        <ul>
+          <li><%= link_to(t('layouts.help_centre'), t('layouts.help_url'), :title => t('layouts.help_title')) %></li>
+          <li><%= link_to(t('layouts.documentation'), t('layouts.wiki_url'), :title => t('layouts.documentation_title')) %></li>
+          <li><%= link_to t('layouts.copyright'), {:controller => 'site', :action => 'copyright'} %></li>
+          <li><a href="http://blogs.openstreetmap.org/" title="<%= t 'layouts.community_blogs_title' %>"><%= t 'layouts.community_blogs' %></a></li>
+          <li><a href="http://www.osmfoundation.org" title="<%= t 'layouts.foundation_title' %>"><%= t 'layouts.foundation' %></a></li>
+          <%= yield :left_menu %>
+        </ul>
+      </div>
+
+      <%= yield :optionals %>
+
       <center>
         <div class="donate">
           <a href="http://donate.openstreetmap.org/" title="<%= h(t('layouts.make_a_donation.title')) %>"><%= h(t('layouts.make_a_donation.text')) %></a>
         </div>
       </center>
-     <% end %>
- 
-
-      <%= yield :optionals %>
-
-      <%= yield :doroam %>
-
     </div>
   </body>
 </html>

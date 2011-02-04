@@ -52,6 +52,18 @@ hr {
   -moz-border-radius: 5px;
 }
 
+#logo_small {
+  width: 170px;
+  min-width: 170px;
+  padding: 5px;
+  margin: 5px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #ccd;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
 #logo h1 {
   font-size: 14px;
   text-align: center;
