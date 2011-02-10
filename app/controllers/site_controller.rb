@@ -6,9 +6,8 @@ class SiteController < ApplicationController
   before_filter :require_user, :only => [:edit]
 
   def index
-    @om = OntologyMapping.find_by_name("activities2tags")
-    @o = @om.source
     @classes = if params[:class].nil? then [] else params[:class].keys end
+    @main_class = OntologyClass.find_by_name("Activities")
   end
 
   def export

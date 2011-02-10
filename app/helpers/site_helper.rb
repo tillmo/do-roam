@@ -1,17 +1,17 @@
 module SiteHelper
   
-  def diplay_class_menu(om,c)
-    if !c.interesting(om) 
+  def diplay_class_menu(c)
+    if !c.interesting
       return ""
     end
     checkbox = check_box_tag("class[" + c.id.to_s + "]")
     out = "<li><a>#{checkbox} #{c.name}"
-    if !c.subclasses.empty? and c.subclasses.map{|x| x.interesting(om)}.any? then
+    if !c.subclasses.empty? and c.subclasses.map{|x| x.interesting}.any? then
       out += "&nbsp;"
       out += image_tag("right-arrow.png")
       out += "</a><ul>"
       c.subclasses.each do |sub|
-        out += diplay_class_menu(om,sub)
+        out += diplay_class_menu(sub)
       end
       out += "</ul>"
     end

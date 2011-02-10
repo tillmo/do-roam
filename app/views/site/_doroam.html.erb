@@ -163,12 +163,10 @@
   <table border=0>
   	<tr><td>
   	<div>
-           <label>Activities:</label></br>		   
-		   <% o = @om.source %>
-		   <% main_class = o.roots[0].subclasses[1] %>
+           <%= check_box_tag("class[" + @main_class.id.to_s + "]")%> all Activities</br>		   
 		   <ul id="menu">
-		     <% main_class.subclasses.each do |c| %>
-  		         <%= diplay_class_menu(@om,c) %>				  	
+		     <% @main_class.subclasses.each do |c| %>
+  		         <%= diplay_class_menu(c) %>				  	
              <% end %>
            </ul>
   </div> 	

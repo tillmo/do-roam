@@ -4,32 +4,29 @@ namespace :ontology do
     # delete old stuff and read in ontologies
     Ontology.all.each do |o| o.destroy end
     OntologyMapping.all.each do |o| o.destroy end
-    puts "Reading ../MappingFiles/activity.owl"
-    s = Ontology.read_ontology("../MappingFiles/activity.owl","activities")
+    puts "Reading ../MappingFiles/activity-eng.owl"
+    s = Ontology.read_ontology("../MappingFiles/activity-eng.owl","activities")
     puts "Reading ../MappingFiles/tags.owl"
     t = Ontology.read_ontology("../MappingFiles/tags.owl","tags")
-    puts "Reading ../MappingFiles/activities2tags.view"
-   OntologyMapping.read_mapping("../MappingFiles/activities2tags.view","activities2tags",s,t)
-    # s = Ontology.read_ontology("../MappingFiles/activity-eng.owl","activities-eng")
-  end
-  desc 'Read in icon files'
-  task :read_icons => :environment do
+    puts "Reading ../MappingFiles/map.view"
+    om = OntologyMapping.read_mapping("../MappingFiles/map.view","activities2tags",s,t)
+
     icon("Bank","bank.png")
     icon("Restaurants","restaurant.png")
-    icon("Hochschule","bildungseinrichtungen.png")
-    icon("Schule","schule.png")
+    icon("Universities","bildungseinrichtungen.png")
+    icon("School","schule.png")
     icon("Universitaet","bildungseinrichtungen.png")
     icon("VHS","bildungseinrichtungen.png")
-    icon("Kino","kino.png")
+    icon("Cinema","kino.png")
     icon("Museum", "museum.png")
-    icon("Oper","oper.png")
-    icon("Parkanlage","park.png")
-    icon("Schwimmbad","swimming.png")
-    icon("Theater","theater.png")
+    icon("Opera","oper.png")
+    icon("Park","park.png")
+    icon("SwimmingPool","swimming.png")
+    icon("Theatre","theater.png")
     icon("Wellness","fitness.png")
-    icon("Cafés","cafe.png")
-    icon("FastfoodAndImbiss","fastfood.png")
-    icon("Arabisch","gastronomie.png")
+    icon("Cafes","cafe.png")
+    icon("Fastfood","fastfood.png")
+    icon("Arabic","gastronomie.png")
     icon("Chinesisch","gastronomie.png")
     icon("Deutsch","gastronomie.png")
     icon("Franzoesisch","gastronomie.png")
@@ -63,6 +60,14 @@ namespace :ontology do
     icon("Textilien","texttile.png")
     icon("Strom_aus_nicht_regenerativen_Energien","fuel.png")
     icon("Strom_aus_regenerativen_Energien","fuelpump.png")
+
+    # mark mapped classes that have an icon as interesting
+    om.ontology_mapping_elements.each do |m|
+      c = m.source
+      if !c.iconfile.nil? and !c.iconfile.empty?
+        c.mark_interesting
+      end
+    end
   end
 end
 
@@ -79,5 +84,8 @@ end
     if !c.nil?
       c.iconfile = file
       c.save
+    else
+      puts "#{cname} not found"
     end  
   end  
+  

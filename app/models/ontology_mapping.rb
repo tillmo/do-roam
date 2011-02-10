@@ -17,6 +17,7 @@ class OntologyMapping < ActiveRecord::Base
     m.name = name
     m.save
     File.read(filename).gsub(/[\[\]\n]/,'').split("),").map{|x| x.gsub(/\(/,"").gsub(/\)/,"").gsub("Class","").gsub(" ","").split(",")}.each do |mm|
+      puts "Mapping #{mm[0]} to #{mm[1]}"
       sc = OntologyClass.find_by_name_and_ontology_id(mm[0],s.id)
       tc = OntologyClass.find_by_name_and_ontology_id(mm[1],t.id)
       if sc.nil? then
@@ -29,6 +30,7 @@ class OntologyMapping < ActiveRecord::Base
         OntologyMappingElement.create({:ontology_mapping_id => m.id, :source_id => sc.id, :target_id => tc.id})
       end  
     end
+    return m
   end
   
   # map a class along an ontology mapping

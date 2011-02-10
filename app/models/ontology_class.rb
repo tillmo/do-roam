@@ -29,11 +29,13 @@ class OntologyClass < ActiveRecord::Base
     end
   end
 
-  # is the class interesting w.r.t. an ontology mapping?
-  def interesting(om)
-    (!self.iconfile.nil? and !self.iconfile.empty? and !om.map_class(self).nil?) \
-    or \
-    self.subclasses.map{|c| c.interesting(om)}.any?
+  # mark the class and its parents as interesting
+  def mark_interesting
+    self.interesting = true
+    self.save
+    self.superclasses.each do |c|
+      c.mark_interesting
+    end
   end
 
   # get all descendants (e.g. subclasses, subclasses of subclasses, etc.)
