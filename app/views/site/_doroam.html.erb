@@ -165,15 +165,12 @@
   	<div>
            <label>Activities:</label></br>		   
 		   <% o = @om.source %>
-		   <% classes = o.roots[0].subclasses[1].subclasses %>
+		   <% main_class = o.roots[0].subclasses[1] %>
 		   <ul id="menu">
-		     <% classes.each do |c| %>
-		          <%= diplay_class_menu(c) %>
+		     <% main_class.subclasses.each do |c| %>
+  		         <%= diplay_class_menu(@om,c) %>				  	
              <% end %>
            </ul>
-		   <% if classes.size > 116 %>
-    	       <%= link_to "More ...", "#" %> 
-           <% end %>
   </div> 	
   </p>
  </td></tr>

@@ -31,7 +31,7 @@ class OntologyClass < ActiveRecord::Base
 
   # is the class interesting w.r.t. an ontology mapping?
   def interesting(om)
-    (!self.iconfile.nil? and !self.iconfile.empty? and !om.nodetags(self).empty?) \
+    (!self.iconfile.nil? and !self.iconfile.empty? and !om.map_class(self).nil?) \
     or \
     self.subclasses.map{|c| c.interesting(om)}.any?
   end
