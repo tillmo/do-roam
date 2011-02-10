@@ -176,19 +176,22 @@
  	  <div>  	
       <%= submit_tag("search")%>
   </div> 	
-  <div>  	         <%= check_box_tag "time"%> Time: <%= select_tag "day", 
+  <div>  	         <%= check_box_tag "time"%>  Restrict to time:
+  </div> 	
+  <div> <small> <%= select_tag "day", 
                options_for_select([["Mon", 1],["Tue",2],["Wed",3],["Thu",4],["Fri",5],["Sat",6],["Sun",7]], 
                  [1]) %>
 		    <%= select_tag "hour", 
                options_for_select((0..23).map{|i| [i,i]}, 
-                 [10]) %> :
+                 [10]) %> 
 			<%= select_tag "min", 
                options_for_select((0..5).map{|i| [i*10,i*10]}, 
-                 [0]) %>	 
+                 [0]) %></small>	 
    </div> 	
   <div>  
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Duration:
-		    <%= select_tag "duration_hour", 
+  </div> 	
+  <div> 		    <%= select_tag "duration_hour", 
                options_for_select((0..23).map{|i| [i,i]}, 
                  [10]) %> :
 			<%= select_tag "duration_min", 
