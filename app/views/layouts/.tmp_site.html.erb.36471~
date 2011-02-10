@@ -6,7 +6,6 @@
     <%= javascript_include_tag 'prototype' %>
     <%= javascript_include_tag 'site' %>
     <%= javascript_include_tag 'menu' %>
-	<%= javascript_include_tag 'Menu-1.3.1.js' %>
 	<%= javascript_include_tag 'jquery-1.4.2.min.js' %>
      <script type="text/javascript">
         jQuery.noConflict();
@@ -24,37 +23,6 @@
     <%= style_rules %>
     <%= yield :head %>
     <title>DO-ROAM<%= ' | '+ h(@title) if @title %></title>
-	
-	<script type="text/javascript">
-                        Menu.init("menu", {"orientation": Menu.VERTICAL});
-                </script>
-
-                <!-- Simple style sheet for horizontal menu -->
-                <style type="text/css">
-                        /* reset default styles */
-                        #menu,
-                        #menu ul { margin: 0; padding: 0; }
-                        #menu li { list-style-type: none; }
-                        
-                        /* first level */
-                        #menu { width: 170px; }
-                        #menu li,
-                        #menu a { float: left; width: 170px; }
-                        #menu a { display: block; background: #EEE; }
-                        #menu a:hover,
-                        #menu a.menu_open { background: #DDD; }
-
-                        /* second level */
-                        #menu ul { visibility: hidden; position: absolute; width: 170px; }
-                        #menu ul a { background: #DDD; }
-                        #menu ul a:hover,
-                        #menu ul a.menu_open { background: #CCC; }
-
-                        /* third level (colors) */
-                        #menu ul ul a { background: #CCC; }
-                        #menu ul ul a:hover { background: #BBB; }
-                </style>
-
   </head>
   <body>
 
