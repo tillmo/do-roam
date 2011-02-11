@@ -30,7 +30,7 @@ namespace :ontology do
   icon("Synagogues","jewish.png")
   icon("Kindergarten","childcare.png")
   icon("Wellness","fitness.png")
-  icon("ChargingStation","battery.png")
+  icon("ChargingStation","plug.png")
   icon("supermarket","mall.png")
   icon("BicycleRental","bicyclerent.png")
   icon("Electronics","electronics.png")
