@@ -1,4 +1,11 @@
-sudo su postgres sh -c "echo 'DROP DATABASE openstreetmap;' | psql"
-sudo su postgres createdb -E UTF8 -O openstreetmap openstreetmap
-sudo su postgres psql -d openstreetmap < /usr/share/postgresql/8.4/contrib/btree_gist.sql
-osmosis --read-xml-0.6 file="/home/emobility/germany.osm" --write-apidb-0.6 populateCurrentTables=yes host="localhost" database="openstreetmap" user="openstreetmap" password="dfkiteam" validateSchemaVersion=no
+#!/usr/bin/bash
+
+main
+{
+sudo su postgres sh -c "echo 'DROP DATABASE openstreetmap-tmp;' | psql"
+sudo su postgres createdb -E UTF8 -O openstreetmap openstreetmap-tmp
+sudo su postgres psql -d openstreetmap-tmp < /usr/share/postgresql/8.4/contrib/btree_gist.sql
+osmosis --read-xml-0.6 file="tmp/planet.osm.bz2" --write-apidb-0.6 populateCurrentTables=yes host="localhost" database="openstreetmap-tmp" user="openstreetmap" password="dfkiteam" validateSchemaVersion=no
+}
+
+main 2>&1 | tee -a log/reload-data.log
