@@ -47,9 +47,9 @@ hr {
   margin: 5px;
   height: 150px;
   background: #fff;
-  border: 1px solid #ccd;
+/*  border: 1px solid #ccd;
   border-radius: 5px;
-  -moz-border-radius: 5px;
+  -moz-border-radius: 5px;*/
 }
 
 #logo_small {

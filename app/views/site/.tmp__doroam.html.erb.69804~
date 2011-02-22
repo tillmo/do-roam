@@ -165,7 +165,7 @@
   	<div>
 		   <ul id="menu">
            <li><%= check_box_tag("class[" + @main_class.id.to_s + "]")%> all Activities</br></li>		   
-		     <% @main_class.subclasses.sort{|c1,c2| c1.name <=> c2.name}.each do |c| %>
+		     <% @main_class.subclasses.each do |c| %>
   		         <%= diplay_class_menu(c) %>				  	
              <% end %>
            </ul>
