@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh emobility@communtu.org "cd do-roam; git pull; script/web restart"
