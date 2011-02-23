@@ -13,7 +13,7 @@ class Interval < ActiveRecord::Base
     end
     days = parse[1].split(",").map do |d|
       start,stop = d.split("-").map{|x| Interval.parse_day(x)}
-      if start.nil? then [] 
+      if start.nil? then puts "Could not parse #{d}"; [] 
         elsif stop.nil? then (start..start).to_a 
         else (start..stop).to_a 
       end
@@ -27,13 +27,13 @@ class Interval < ActiveRecord::Base
           else (starth..DAY)
           end
         else
-          []
+          puts "Could not parse #{h}"; []
         end  
       else  
         start = Interval.parse_hour(start)
         stop = Interval.parse_hour(stop)
-        if start.nil? then [] 
-          elsif stop.nil? then [] 
+        if start.nil? then "Could not parse #{h}"; [] 
+          elsif stop.nil? then "Could not parse #{h}"; [] 
           else [(start..stop)]
         end  
       end
@@ -65,7 +65,7 @@ class Interval < ActiveRecord::Base
       when "Sa" then 5
       when "Su" then 6
       when "So" then 6
-      else nil
+      else "Could not parse #{s}"; nil
     end
   end
 
@@ -87,5 +87,13 @@ class Interval < ActiveRecord::Base
       i = Interval.create(:start => start, :stop => stop)
     end
     return i
+  end
+  
+  def dsfe(i)
+    i.start <= self.start and i.stop >= self.stop
+  end
+  
+  def dsfe_many(is)
+    is.any? {|i| self.dsfe(i)}
   end
 end

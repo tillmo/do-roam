@@ -86,7 +86,11 @@
 
       var url = "/api/0.6/ontosearch?"
            + "zoom=" + zoom
-           + "&class=" + "<%=  @classes.join(',') %>"
+           + "&class=" + "<%= @classes.join(',') %>"
+           <% if !@interval.nil? then %> 
+		     + "&start=" + "<%= @interval.start %>"
+		     + "&stop=" + "<%= @interval.stop %>"
+		   <% end %>
            + "&minlon=" + extents.left // tlLonLat.lon
            + "&maxlat=" + extents.top // tlLonLat.lat
            + "&minlat=" + extents.bottom // brLonLat.lon
@@ -179,23 +183,23 @@
   <div>  	         <%= check_box_tag "time"%>  Restrict to time:
   </div> 	
   <div> <small> <%= select_tag "day", 
-               options_for_select([["Mon", 1],["Tue",2],["Wed",3],["Thu",4],["Fri",5],["Sat",6],["Sun",7]], 
-                 [1]) %>
+               options_for_select([["Mon", 0],["Tue",1],["Wed",2],["Thu",3],["Fri",4],["Sat",5],["Sun",6]], 
+                 [Date.today.wday-1]) %>
 		    <%= select_tag "hour", 
                options_for_select((0..23).map{|i| [i,i]}, 
-                 [10]) %> 
+                 [Time.now.hour]) %> 
 			<%= select_tag "min", 
-               options_for_select((0..5).map{|i| [i.to_s+"0",i.to_s+"0"]}, 
-                 [0]) %></small>	 
+               options_for_select((0..5).map{|i| [i.to_s+"0",i]}, 
+                 [Time.now.min / 10]) %></small>	 
    </div> 	
   <div>  
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Duration:
   </div> 	
   <div> 		    <%= select_tag "duration_hour", 
                options_for_select((0..23).map{|i| [i,i]}, 
-                 [10]) %> :
+                 [2]) %> :
 			<%= select_tag "duration_min", 
-               options_for_select((0..5).map{|i| [i.to_s+"0",i.to_s+"0"]}, 
+               options_for_select((0..5).map{|i| [i.to_s+"0",i]}, 
                  [0]) %>	
    </div> 	
      </form>

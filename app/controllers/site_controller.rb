@@ -8,6 +8,11 @@ class SiteController < ApplicationController
   def index
     @classes = if params[:class].nil? then [] else params[:class].keys end
     @main_class = OntologyClass.find_by_name("Activities")
+    if !params[:time].nil? then
+      start = params[:day].to_i * Interval::DAY + params[:hour].to_i * 60 + params[:min].to_i * 10
+      stop = start + params[:duration_hour].to_i * 60 + params[:duration_min].to_i * 10
+      @interval = Interval.new(:start => start, :stop => stop)
+    end
   end
 
   def export

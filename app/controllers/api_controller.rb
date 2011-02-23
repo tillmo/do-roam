@@ -315,7 +315,7 @@ class ApiController < ApplicationController
     render :text => doc.to_s, :content_type => "text/xml"
   end
   
-    def ontosearch
+  def ontosearch
 
     doc = XML::Document.new
     doc.encoding = XML::Encoding::UTF_8
@@ -332,6 +332,8 @@ class ApiController < ApplicationController
     cids.each do |cid|
     c = OntologyClass.find_by_id(cid.to_i)
 
+    start = params[:start]
+    stop = params[:stop]
     minlon = params[:minlon].to_f
     minlat = params[:minlat].to_f
     maxlon = params[:maxlon].to_f
@@ -359,6 +361,13 @@ class ApiController < ApplicationController
         # get nodetags for class sub whose nodes are within the bounds
         # TODO: perhaps get all nodetags for all classes at once? 
         nts = NodeTag.find(:all,:conditions=>OSM.sql_for_area(minlat, minlon, maxlat, maxlon,"current_nodes.")+" AND (\"current_node_tags\".\"#{key}\" = '#{val}')",:include=>"node")
+        if !start.nil? and !stop.nil? then
+          # TODO: optimise this using database queries, similar to those (but be aware of duplicate use to NodeTag that is needed):
+          # Interval.find(:all,:conditions => ["start <=  ? and stop >= ?",start,stop])
+          # positions = Positions.find :all, :conditions => ['id in (?)', nts.map(&:id)]
+          i = Interval.new(:start=>start,:stop=>stop)
+          nts = nts.select{|nt| i.dsfe_many(nt.intervals)}
+        end
       end
       for nt in nts 
          elem = XML::Node.new 'wpt'

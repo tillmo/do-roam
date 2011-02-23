@@ -132,6 +132,18 @@ namespace :ontology do
   end
 end
 
+namespace :intervals do
+  desc 'Read in opening hours'
+  task :read => :environment do
+    NodeTag.find(:all,:conditions=>{:k=>"opening_hours"}).each do |nt|
+      puts "nodetag # #{nt.id}"
+      Interval.parse_many(nt.v).each do |i|
+        NodeTagInterval.create(:node_tag_id => nt.id, :interval_id => i.id)
+      end
+    end
+  end
+end
+
 namespace :map do
   desc 'Read in OSM data for Bremen'
   task :read_bremen => :environment do
