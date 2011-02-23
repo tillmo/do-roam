@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  way_tag_id: 1
+  interval_id: 1
+
+two:
+  way_tag_id: 1
+  interval_id: 1

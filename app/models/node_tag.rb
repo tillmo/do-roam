@@ -7,4 +7,7 @@ class NodeTag < ActiveRecord::Base
   validates_length_of :k, :v, :maximum => 255, :allow_blank => true
   validates_uniqueness_of :id, :scope => :k
   validates_numericality_of :id, :only_integer => true
+  
+  has_many :node_tag_intervals
+  has_many :intervals, :through => :node_tag_intervals
 end
