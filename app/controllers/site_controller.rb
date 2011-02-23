@@ -13,6 +13,18 @@ class SiteController < ApplicationController
       stop = start + params[:duration_hour].to_i * 60 + params[:duration_min].to_i * 10
       @interval = Interval.new(:start => start, :stop => stop)
     end
+    # remember values for form
+    @time = params[:time]
+    @day = params[:day]
+    if @day.nil? then @day = Date.today.wday-1 end
+    @hour = params[:hour]
+    if @hour.nil? then @hour = Time.now.hour end
+    @min = params[:min]
+    if @min.nil? then @min = Time.now.min / 10 end
+    @duration_hour = params[:duration_hour]
+    if @duration_hour.nil? then @duration_hour = 1 end
+    @duration_min = params[:duration_min]
+    if @duration_min.nil? then @duration_min = 0 end
   end
 
   def export
