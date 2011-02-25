@@ -6,25 +6,9 @@ class SiteController < ApplicationController
   before_filter :require_user, :only => [:edit]
 
   def index
+    @reload = true
     @classes = if params[:class].nil? then [] else params[:class].keys end
-    @main_class = OntologyClass.find_by_name("Activities")
-    if !params[:time].nil? then
-      start = params[:day].to_i * Interval::DAY + params[:hour].to_i * 60 + params[:min].to_i * 10
-      stop = start + params[:duration_hour].to_i * 60 + params[:duration_min].to_i * 10
-      @interval = Interval.new(:start => start, :stop => stop)
-    end
-    # remember values for form
-    @time = params[:time]
-    @day = params[:day]
-    if @day.nil? then @day = Date.today.wday-1 end
-    @hour = params[:hour]
-    if @hour.nil? then @hour = Time.now.hour end
-    @min = params[:min]
-    if @min.nil? then @min = Time.now.min / 10 end
-    @duration_hour = params[:duration_hour]
-    if @duration_hour.nil? then @duration_hour = 1 end
-    @duration_min = params[:duration_min]
-    if @duration_min.nil? then @duration_min = 0 end
+    prepare_mainpage
   end
 
   def export

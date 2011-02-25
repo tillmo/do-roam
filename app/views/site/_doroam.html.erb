@@ -35,6 +35,8 @@
     var markers; // holds Markers object
     var my_markers = new Array(); // our list of Markers
 
+    var classes = "<%= @classes.join(',') %>";
+
     // Determines if the marker is within the bounds of the visible part of the map at the current zoom level
     function marker_is_in_view(marker) {
 	  var extents = getMapExtent();
@@ -86,7 +88,7 @@
 
       var url = "/api/0.6/ontosearch?"
            + "zoom=" + zoom
-           + "&class=" + "<%= @classes.join(',') %>"
+           + "&class=" + classes
            <% if !@interval.nil? then %> 
 		     + "&start=" + "<%= @interval.start %>"
 		     + "&stop=" + "<%= @interval.stop %>"
@@ -170,15 +172,16 @@
 		   <ul id="menu">
            <li><%= check_box_tag("class[" + @main_class.id.to_s + "]")%> all Activities</br></li>		   
 		     <% @main_class.subclasses.sort{|c1,c2| c1.name <=> c2.name}.each do |c| %>
-  		         <%= diplay_class_menu(c,@classes) %>				  	
+  		         <%= display_class_menu(c,@classes) %>
              <% end %>
            </ul>
   </div> 	
   </p>
+ 
  </td></tr>
   	<tr><td>
  	  <div>  	
-      <%= submit_tag("search")%>
+      <%= submit_tag("Search")%>
   </div> 	
   <div>  	         <%= check_box_tag "time", 1, @time %>  Restrict to time:
   </div> 	

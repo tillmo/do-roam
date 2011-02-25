@@ -32,7 +32,7 @@
 	
 
   </head>
-  <body>
+<body  <%  if @reload then %> onload="page.reload()" <%  end %> ;>
 
     <div id="content">
       <% if flash[:error] %>
