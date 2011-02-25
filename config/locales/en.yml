@@ -1864,7 +1864,7 @@ en:
     Angiology: Angiology
     Argentinian: Argentinian
     Armenian: Armenian
-    ArtGalleries: Art Galleries
+    ArtGallery: Art Gallery
     Australian: Australian
     Ballroom: Ballroom
     Belgian: Belgian
@@ -1872,168 +1872,168 @@ en:
     Biochemistry: Biochemistry
     Bosnian: Bosnian
     Brazilian: Brazilian
-    Brithish: Brithish
+    Brithish: British
     Bulgarian: Bulgarian
     Burmese: Burmese
     Cameroonian: Cameroonian
     Cardiology: Cardiology
-    ChildrensAndAdolescentMedicine: ChildrensAndAdolescentMedicine
-    ChildrensAndYouthPsychology: ChildrensAndYouthPsychology
+    ChildrensAndAdolescentMedicine: Children's & Adolescent Medicine
+    ChildrensAndYouthPsychology: Children's & Youth Psychology
     Chilean: Chilean
-    ClinicalPharmacology: ClinicalPharmacology
+    ClinicalPharmacology: Clinical Pharmacology
     Colombian: Colombian
     Cuban: Cuban
-    DanceClasses: Dance Classes
-    DanceClubs: Dance Clubs
+    DanceClasse: Dance Classe
+    DanceClub: Dance Club
     Danish: Danish
     Dentistry: Dentistry
     DiagnosticRadiology: Diagnostic Radiology
-    DrivingSchools: Driving Schools
-    EarNoseThroatMedicine: EarNoseThroatMedicine
+    DrivingSchool: Driving School
+    EarNoseThroatMedicine: Ear Nose & Throat Medicine
     Egyptian: Egyptian
     Endocrinology: Endocrinology
     Ethiopian: Ethiopian
     Exchange: Exchange
     Finnish: Finnish
-    FleaMarkets: FleaMarkets
+    FleaMarket: Flea Market
     Gastroenterology: Gastroenterology
-    GeneralChildrensAndAdolescentMedicine: GeneralChildrensAndAdolescentMedicine
-    GeneralInternalMedicine: GeneralInternalMedicine
-    GeneralMedicine: GeneralMedicine
-    GeneralOrthopedics: GeneralOrthopedics
-    GeneralPathology: GeneralPathology
-    GeneralRadiology: GeneralRadiology
-    GeneralSurgery: GeneralSurgery
+    GeneralChildrensAndAdolescentMedicine: General Children's & Adolescent Medicine
+    GeneralInternalMedicine: General Internal Medicine
+    GeneralMedicine: General Medicine
+    GeneralOrthopedics: General Orthopedics
+    GeneralPathology: General Pathology
+    GeneralRadiology: General Radiology
+    GeneralSurgery: General Surgery
     Georgian: Georgian
     Gynecology: Gynecology
-    HairRemoval: HairRemoval
-    HeartSurgery: HeartSurgery
-    HematologyAndOncology: HematologyAndOncology
+    HairRemoval: Hair Removal
+    HeartSurgery: Heart Surgery
+    HematologyAndOncology: Hematology & Oncology
     Homeopathy: Homeopathy
-    HorsebackRiding: HorsebackRiding
-    HouseholdGoods: HouseholdGoods
-    HumanGenetics: HumanGenetics
-    InternalMedicine: InternalMedicine
+    HorsebackRiding: Horseback Riding
+    HouseholdGoods: Household
+    HumanGenetics: Human Genetics
+    InternalMedicine: Internal Medicine
     Iraqi: Iraqi
     Irish: Irish
-    Israelian: Israelian
+    Israeli: Israeli
     Karaoke: Karaoke
     Korean: Korean
-    LaboratoryMedicine: LaboratoryMedicine
-    Lakes: Lakes
-    Activities: Activities
+    LaboratoryMedicine: Laboratory Medicine
+    Lake: Lake
+    Activity: Activity
     Delicatessen: Delicatessen
     Food: Food
-    Acomodation: Acomodation
+    Accommodation: Accommodation
     Leisure: Leisure
     Address: Address
     Cuisine: Cuisine
     Electronics: Electronics
-    Forests: Forests
+    Forest: Forest
     Climbing: Climbing
     College: College
     Gastronomy: Gastronomy
-    Doctors: Doctors
+    Doctor: Doctor
     Cosmetics: Cosmetics
-    Castles: Castles
-    Cafes: Cafes
+    Castle: Castle
+    Cafe: Café
     Bowling: Bowling
-    GolfCourses: GolfCourses
+    GolfCourse: Golf Course
     Hospital: Hospital
-    BicycleRental: BicycleRental
+    BicycleRental: Bicycle Rental
     Italian: Italian
     Cinema: Cinema
     Hiking: Hiking
     Indian: Indian
-    Hairdressers: Hairdressers
+    Hairdresser: Hairdresser
     Bank: Bank
     ATM: ATM
     Kindergarten: Kindergarten
-    CivilService: CivilService
+    CivilService: Civil Service
     Japanese: Japanese
     Bakery: Bakery
     German: German
     Clothing: Clothing
     Fish: Fish
-    Hostels: Hostels
+    Hostel: Hostel
     Landscape: Landscape
     Bookstore: Bookstore
-    Flowers: Flowers
+    Flower: Flower
     Camping: Camping
-    CarSharing: CarSharing
-    BusStop: BusStop
+    CarSharing: Car Sharing
+    BusStop: Bus Stop
     Greek: Greek
     Lingerie: Lingerie
-    LiveMusic: LiveMusic
-    ManicureSalon: ManicureSalon
-    MarketForBabiesAndChildren: MarketForBabiesAndChildren
-    MicrobiologyAndInfectionsEpidemiology: MicrobiologyAndInfectionsEpidemiology
-    MiddleAndUpperSchools: MiddleAndUpperSchools
-    Mountains: Mountains
+    LiveMusic: Live Music
+    ManicureSalon: Manicure Salon
+    MarketForBabiesAndChildren: Baby & Children
+    MicrobiologyAndInfectionsEpidemiology: Microbiology & Infections Epidemiology
+    MiddleAndUpperSchool: Middle / Upper School
+    Mountain: Mountain
     Neonatology: Neonatology
     Nepalese: Nepalese
     Nephrology: Nephrology
     Neurology: Neurology
-    NeurologyAndPsychiatry: NeurologyAndPsychiatry
+    NeurologyAndPsychiatry: Neurology & Psychiatry
     Neuropaediatrics: Neuropaediatrics
     Neuropathology: Neuropathology
     Neuroradiology: Neuroradiology
     Neurosurgery: Neurosurgery
-    NightClubs: NightClubs
-    NightSchool: NightSchool
-    NuclearMedicine: NuclearMedicine
+    NightClub: Night Club
+    NightSchool: Night School
+    NuclearMedicine: Nuclear Medicine
     Obstetrics: Obstetrics
     Ocean: Ocean
     Ophthalmology: Ophthalmology
-    OralAndMaxillofacialSurgery: OralAndMaxillofacialSurgery
+    OralAndMaxillofacialSurgery: Oral & Maxillofacial Surgery
     Orthopedics: Orthopedics
-    OrthopedicsAndAccidentSurgery: OrthopedicsAndAccidentSurgery
+    OrthopedicsAndAccidentSurgery: Orthopedic & Accident Surgery
     Pakistani: Pakistani
     Pathology: Pathology
-    PediatricRadiology: PediatricRadiology
-    PediatricSurgery: PediatricSurgery
-    PediatryCardiology: PediatryCardiology
-    Phones: Phones
-    PhoniatricsAndAudiology: PhoniatricsAndAudiology
-    PhysicalAndRehabilitatveMedicine: PhysicalAndRehabilitatveMedicine
-    PlasticSurgery: PlasticSurgery
-    PneumologyANDPulmonaryMedicine: PneumologyANDPulmonaryMedicine
-    PrimarySchool: PrimarySchool
-    PrivateSchools: PrivateSchools
-    PsychiatryAndPsychotherapy: PsychiatryAndPsychotherapy
-    RadiationTherapy: RadiationTherapy
+    PediatricRadiology: Pediatric Radiology
+    PediatricSurgery: Pediatric Surgery
+    PediatricCardiology: Pediatric Cardiology
+    Phone: Phone
+    PhoniatryAndAudiology: Phoniatry & Audiology
+    PhysicalAndRehabilitatveMedicine: Physical & rehabilitative Medicine
+    PlasticSurgery: Plastic Surgery
+    PneumologyANDPulmonaryMedicine: Pneumology & Pulmonary Medicine
+    PrimarySchool: Primary School
+    PrivateSchool: Private School
+    PsychiatryAndPsychotherapy: Psychiatry & Psychotherapy
+    RadiationTherapy: Radiation Therapy
     Radiology: Radiology
-    RailStation: RailStation
+    RailStation: Rail Station
     Rheumatology: Rheumatology
     Romanian: Romanian
     Sandwich: Sandwich
-    SelfDefenceAndCombatantSport: SelfDefenceAndCombatantSport
-    SkatingRinks: SkatingRinks
-    SkiRun: SkiRun
-    SkinAndVenerealDiseases: SkinAndVenerealDiseases
-    SportGoods: SportGoods
+    SelfDefenseAndCombatantSport: Self Defense & Combatant Sport
+    SkatingRink: Skating Rink
+    SkiRun: Ski Run
+    SkinAndVenerealDiseases: Skin & Venereal Diseases
+    SportGoods: Sport
     Squash: Squash
     Steak: Steak
     Surgery: Surgery
     TV: TV
     Tapas: Tapas
-    TextureAndSewingGoods: TextureAndSewingGoods
-    ThoracicSurgery: ThoracicSurgery
+    TextureAndSewingGoods: Texture & Sewing
+    ThoracicSurgery: Thoracic Surgery
     Tobacco: Tobacco
-    TouristInfo: TouristInfo
-    TransfusionMedicine: TransfusionMedicine
-    TraumaSurgery: TraumaSurgery
+    TouristInfo: Tourist Info
+    TransfusionMedicine: Transfusion Medicine
+    TraumaSurgery: Trauma Surgery
     Urology: Urology
-    VacacionApartments: VacacionApartments
-    VascularSurgery: VascularSurgery
+    VacationApartment: Vacation Apartment
+    VascularSurgery: Vascular Surgery
     Vegan: Vegan
     Visceral: Visceral
-    VocationalSchool: VocationalSchool
-    WithRenewableEnergies: WithRenewableEnergies
-    WomensHealth: WomensHealth
+    VocationalSchool: Vocational School
+    WithRenewableEnergy: With Renewable Energy
+    WomensHealth: Women's Health
     Yoga: Yoga
     Wellness: Wellness
-    Ruins: Ruins
+    Ruin: Ruin
     Stationery: Stationery
     Nationality: Nationality
     Library: Library
@@ -2041,7 +2041,7 @@ en:
     Subway: Subway
     Sushi: Sushi
     Sauna: Sauna
-    Restaurants: Restaurants
+    Restaurant: Restaurant
     Tram: Tram
     Thai: Thai
     Thing: Thing
@@ -2051,38 +2051,38 @@ en:
     Police: Police
     Pizza: Pizza
     Opera: Opera
-    Shoes: Shoes
-    Opticians: Opticians
+    Shoe: Shoe
+    Optician: Optician
     Toys: Toys
-    PlacesOfInterest: PlacesOfInterest
+    PlaceOfInterest: Place of Interest
     Vegetarian: Vegetarian
     supermarket: supermarket
     Pleasure: Pleasure
-    Rivers: Rivers
-    Synagogues: Synagogues
-    TravelAgencies: TravelAgencies
-    Universities: Universities
+    River: River
+    Synagogue: Synagogue
+    TravelAgencies: Travel Agencies
+    University: University
     Shopping: Shopping
     Tourism: Tourism
-    PlacesOfWorship: PlacesOfWorship
-    PublicTransport: PublicTransport
+    PlaceOfWorship: Place of Worship
+    PublicTransport: Public Transport
     Pharmacy: Pharmacy
     Drugstore: Drugstore
-    Guestroom: Guestroom
-    YouthHostel: YouthHostel
+    Guestroom: Guest Room
+    YouthHostel: Youth Hostel
     Minigolf: Minigolf
-    Churches: Churches
-    Mosques: Mosques
+    Church: Church
+    Mosque: Mosque
     Education: Education
     Health: Health
-    SwimmingPool: SwimmingPool
-    SportAndFitness: SportAndFitness
-    OpeningHours: OpeningHours
-    PostOffice: PostOffice
+    SwimmingPool: Swimming Pool
+    SportAndFitness: Sport & Fitness
+    OpeningHours: Opening Hours
+    PostOffice: Post Office
     Furniture: Furniture
     American: American
     Computer: Computer
-    FastFood: FastFood
+    FastFood: Fast Food
     Parking: Parking
     Massage: Massage
     Chinese: Chinese
@@ -2093,10 +2093,10 @@ en:
     Mall: Mall
     Park: Park
     Finance: Finance
-    Butchers: Butchers
-    Valleys: Valleys
-    Motels: Motels
+    Butcher: Butcher
+    Valley: Valley
+    Motel: Motel
     Hotels: Hotels
-    InformationService: InformationService
-    FitnessStudio: FitnessStudio
+    InformationService: Information Service
+    FitnessStudio: Fitness Studio
     

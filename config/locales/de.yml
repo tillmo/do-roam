@@ -1714,3 +1714,245 @@ de:
       fail: Konnte die Zuordnung von Benutzer ‚Äû{{name}}‚Äú zu Rolle ‚Äû{{role}}‚Äú nicht aufheben. Bitte √ºberpr√ºfe, ob es sich um einen g√ºltigen Benutzer und eine g√ºltige Rolle handelt.
       heading: Best√§tige Aufhebung der Rollenzuordnung
       title: Best√§tige Aufhebung der Rollenzuordnung
+  
+ Albanian: Albanisch
+    ChargingStation: Ladestation
+    Anaesthesiology: Anaesthesiologie
+    Angiology: Angiology
+    Argentinian: Argentinisch
+    Armenian: Armenisch
+    ArtGallery: Kunstgalerie
+    Australian: Australisch
+    Ballroom: Tanzsaal
+    Belgian: Belgisch
+    BillardsAndPool: Billard
+    Biochemistry: Biochemie
+    Bosnian: Bosnisch
+    Brazilian: Brasilianisch
+    Brithish: Englisch
+    Bulgarian: Bulgarisch
+    Burmese: Burmeseisch
+    Cameroonian: Kamerunisch
+    Cardiology: Cardiology
+    ChildrensAndAdolescentMedicine: Children's & Adolescent Medicine
+    ChildrensAndYouthPsychology: Children's & Youth Psychology
+    Chilean: Chilenisch
+    ClinicalPharmacology: Clinical Pharmacology
+    Colombian: Kolumbianisch
+    Cuban: Kubanisch
+    DanceClasse: Tanzstunde
+    DanceClub: Club
+    Danish: Dänisch
+    Dentistry: Zahnarzt
+    DiagnosticRadiology: Diagnostic Radiology
+    DrivingSchool: Fahrschule
+    EarNoseThroatMedicine: Ear Nose & Throat Medicine
+    Egyptian: Egyptisch
+    Endocrinology: Endocrinology
+    Ethiopian: Ethiopisch
+    Exchange: Wechselstube
+    Finnish: Finnisch
+    FleaMarket: Flohmarkt
+    Gastroenterology: Gastroenterology
+    GeneralChildrensAndAdolescentMedicine: General Children's & Adolescent Medicine
+    GeneralInternalMedicine: General Internal Medicine
+    GeneralMedicine: General Medicine
+    GeneralOrthopedics: General Orthopedics
+    GeneralPathology: General Pathology
+    GeneralRadiology: General Radiology
+    GeneralSurgery: General Surgery
+    Georgian: Georgian
+    Gynecology: Gynecology
+    HairRemoval: Haarentfernung
+    HeartSurgery: Heart Surgery
+    HematologyAndOncology: Hematology & Oncology
+    Homeopathy: Homeopathy
+    HorsebackRiding: Reiten
+    HouseholdGoods: Haushalt
+    HumanGenetics: Human Genetics
+    InternalMedicine: Internal Medicine
+    Iraqi: Irakisch
+    Irish: Irisch
+    Israeli: Israelisch
+    Karaoke: Karaoke
+    Korean: Koreanisch
+    LaboratoryMedicine: Laboratory Medicine
+    Lake: See
+    Activity: Activität
+    Delicatessen: Feinkost
+    Food: Lebensmittel
+    Accommodation: Unterkunft
+    Leisure: Feizeit
+    Address: Addresse
+    Cuisine: Cuisine
+    Electronics: Electronik
+    Forest: Wald
+    Climbing: Klettern
+    College: Gymnasium
+    Gastronomy: Gastronomie
+    Doctor: Arzt
+    Cosmetics: Kosmetik
+    Castle: Burg
+    Cafe: Café
+    Bowling: Bowlen
+    GolfCourse: Golf
+    Hospital: Krankenhaus
+    BicycleRental: Fahrradverleih
+    Italian: Italienisch
+    Cinema: Kino
+    Hiking: Wandern
+    Indian: Indisch
+    Hairdresser: Frisör
+    Bank: Bank
+    ATM: Geldautomat
+    Kindergarten: Kindergarten
+    CivilService: Bürgerservice
+    Japanese: Japanisch
+    Bakery: Bäkerei
+    German: Deutsch
+    Clothing: Bekleidung
+    Fish: Fisch
+    Hostel: Hostel
+    Landscape: Landschaft
+    Bookstore: Bookstore
+    Flower: Floristik
+    Camping: Campinplatz
+    CarSharing: Car Sharing Punkt
+    BusStop: Bushaltestelle
+    Greek: Griechisch
+    Lingerie: Unterwäsche
+    LiveMusic: Live Musik
+    ManicureSalon: Maniküre
+    MarketForBabiesAndChildren: Baby & Kind
+    MicrobiologyAndInfectionsEpidemiology: Microbiology & Infections Epidemiology
+    MiddleAndUpperSchool: Unter- und Mittelstufe
+    Mountain: Gebirge
+    Neonatology: Neonatology
+    Nepalese: Nepalese
+    Nephrology: Nephrology
+    Neurology: Neurology
+    NeurologyAndPsychiatry: Neurology & Psychiatry
+    Neuropaediatrics: Neuropaediatrics
+    Neuropathology: Neuropathology
+    Neuroradiology: Neuroradiology
+    Neurosurgery: Neurosurgery
+    NightClub: Nachtclub
+    NightSchool: Abendschule
+    NuclearMedicine: Nuclear Medicine
+    Obstetrics: Obstetrics
+    Ocean: Meer
+    Ophthalmology: Ophthalmology
+    OralAndMaxillofacialSurgery: Oral & Maxillofacial Surgery
+    Orthopedics: Orthopedics
+    OrthopedicsAndAccidentSurgery: Orthopedic & Accident Surgery
+    Pakistani: Pakistanisch
+    Pathology: Pathology
+    PediatricRadiology: Pediatric Radiology
+    PediatricSurgery: Pediatric Surgery
+    PediatricCardiology: Pediatric Cardiology
+    Phone: Telefon
+    PhoniatryAndAudiology: Phoniatry & Audiology
+    PhysicalAndRehabilitatveMedicine: Physical & rehabilitative Medicine
+    PlasticSurgery: Plastic Surgery
+    PneumologyANDPulmonaryMedicine: Pneumology & Pulmonary Medicine
+    PrimarySchool: Grundschule
+    PrivateSchool: Privat Schule
+    PsychiatryAndPsychotherapy: Psychiatry & Psychotherapy
+    RadiationTherapy: Radiation Therapy
+    Radiology: Radiology
+    RailStation: Rail Station
+    Rheumatology: Rheumatology
+    Romanian: Rumänisch
+    Sandwich: Sandwich
+    SelfDefenseAndCombatantSport: Selbstverteidigung/Kampfsport
+    SkatingRink: Eisbahn
+    SkiRun: Ski Piste
+    SkinAndVenerealDiseases: Skin & Venereal Diseases
+    SportGoods: Sport
+    Squash: Squash
+    Steak: Steak
+    Surgery: Surgery
+    TV: TV
+    Tapas: Tapas
+    TextureAndSewingGoods: Nähbedarf
+    ThoracicSurgery: Thoracic Surgery
+    Tobacco: Tabak
+    TouristInfo: Turist-Information
+    TransfusionMedicine: Transfusion Medicine
+    TraumaSurgery: Trauma Surgery
+    Urology: Urology
+    VacationApartment: Ferienwohnung
+    VascularSurgery: Vascular Surgery
+    Vegan: Vegan
+    Visceral: Visceral
+    VocationalSchool: Vocational School
+    WithRenewableEnergy: mit erneuerbarer Energie
+    WomensHealth: Women's Health
+    Yoga: Yoga
+    Wellness: Wellness
+    Ruin: Ruinen
+    Stationery: Schreibwaren
+    Nationality: Nationalität
+    Library: Library
+    Theatre: Theatre
+    Subway: Subway
+    Sushi: Sushi
+    Sauna: Sauna
+    Restaurant: Restaurant
+    Tram: Tram
+    Thai: Thai
+    Thing: Thing
+    Mexican: Mexican
+    Turkish: Turkish
+    Spanish: Spanish
+    Police: Police
+    Pizza: Pizza
+    Opera: Opera
+    Shoe: Shoe
+    Optician: Optician
+    Toys: Toys
+    PlaceOfInterest: Place of Interest
+    Vegetarian: Vegetarian
+    supermarket: supermarket
+    Pleasure: Pleasure
+    River: River
+    Synagogue: Synagogue
+    TravelAgencies: Travel Agencies
+    University: University
+    Shopping: Shopping
+    Tourism: Tourism
+    PlaceOfWorship: Place of Worship
+    PublicTransport: Public Transport
+    Pharmacy: Pharmacy
+    Drugstore: Drugstore
+    Guestroom: Guest Room
+    YouthHostel: Youth Hostel
+    Minigolf: Minigolf
+    Church: Church
+    Mosque: Mosque
+    Education: Education
+    Health: Health
+    SwimmingPool: Swimming Pool
+    SportAndFitness: Sport & Fitness
+    OpeningHours: Opening Hours
+    PostOffice: Post Office
+    Furniture: Furniture
+    American: American
+    Computer: Computer
+    FastFood: Fast Food
+    Parking: Parking
+    Massage: Massage
+    Chinese: Chinese
+    Soccer: Soccer
+    Museum: Museum
+    French: French
+    Dance: Dance
+    Mall: Mall
+    Park: Park
+    Finance: Finance
+    Butcher: Butcher
+    Valley: Valley
+    Motel: Motel
+    Hotels: Hotels
+    InformationService: Information Service
+    FitnessStudio: Fitness Studio
