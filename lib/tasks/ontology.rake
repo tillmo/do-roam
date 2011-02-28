@@ -58,7 +58,7 @@ namespace :ontology do
   icon("Motels","hotel.png")
   icon("Hotels","hotel.png")
   icon("Cafes","cafe.png")
-  icon("Universities","education.png")
+  icon("Universities","university.png")
   icon("Shopping","mall.png")
   icon("Clothing","texttile.png")
   icon("SwimmingPool","swimming.png")
