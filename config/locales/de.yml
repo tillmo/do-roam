@@ -1742,7 +1742,7 @@ de:
     Cuban: Kubanisch
     DanceClasse: Tanzstunde
     DanceClub: Club
-    Danish: Dänisch
+    Danish: D√§nisch
     Dentistry: Zahnarzt
     DiagnosticRadiology: Diagnostic Radiology
     DrivingSchool: Fahrschule
@@ -1761,7 +1761,7 @@ de:
     GeneralPathology: General Pathology
     GeneralRadiology: General Radiology
     GeneralSurgery: General Surgery
-    Georgian: Georgian
+    Georgian: Georgisch
     Gynecology: Gynecology
     HairRemoval: Haarentfernung
     HeartSurgery: Heart Surgery
@@ -1778,14 +1778,14 @@ de:
     Korean: Koreanisch
     LaboratoryMedicine: Laboratory Medicine
     Lake: See
-    Activity: Activität
+    Activity: Aktivit√§t
     Delicatessen: Feinkost
     Food: Lebensmittel
     Accommodation: Unterkunft
-    Leisure: Feizeit
+    Leisure: Freizeit
     Address: Addresse
     Cuisine: Cuisine
-    Electronics: Electronik
+    Electronics: Elektronik
     Forest: Wald
     Climbing: Klettern
     College: Gymnasium
@@ -1793,7 +1793,7 @@ de:
     Doctor: Arzt
     Cosmetics: Kosmetik
     Castle: Burg
-    Cafe: Café
+    Cafe: Caf√©
     Bowling: Bowlen
     GolfCourse: Golf
     Hospital: Krankenhaus
@@ -1802,13 +1802,13 @@ de:
     Cinema: Kino
     Hiking: Wandern
     Indian: Indisch
-    Hairdresser: Frisör
+    Hairdresser: Fris√∂r
     Bank: Bank
     ATM: Geldautomat
     Kindergarten: Kindergarten
-    CivilService: Bürgerservice
+    CivilService: B√ºrgerservice
     Japanese: Japanisch
-    Bakery: Bäkerei
+    Bakery: B√§kerei
     German: Deutsch
     Clothing: Bekleidung
     Fish: Fisch
@@ -1816,13 +1816,13 @@ de:
     Landscape: Landschaft
     Bookstore: Bookstore
     Flower: Floristik
-    Camping: Campinplatz
+    Camping: Campingplatz
     CarSharing: Car Sharing Punkt
     BusStop: Bushaltestelle
     Greek: Griechisch
-    Lingerie: Unterwäsche
+    Lingerie: Unterw√§sche
     LiveMusic: Live Musik
-    ManicureSalon: Maniküre
+    ManicureSalon: Manik√ºre
     MarketForBabiesAndChildren: Baby & Kind
     MicrobiologyAndInfectionsEpidemiology: Microbiology & Infections Epidemiology
     MiddleAndUpperSchool: Unter- und Mittelstufe
@@ -1862,7 +1862,7 @@ de:
     Radiology: Radiology
     RailStation: Rail Station
     Rheumatology: Rheumatology
-    Romanian: Rumänisch
+    Romanian: Rum√§nisch
     Sandwich: Sandwich
     SelfDefenseAndCombatantSport: Selbstverteidigung/Kampfsport
     SkatingRink: Eisbahn
@@ -1874,7 +1874,7 @@ de:
     Surgery: Surgery
     TV: TV
     Tapas: Tapas
-    TextureAndSewingGoods: Nähbedarf
+    TextureAndSewingGoods: N√§hbedarf
     ThoracicSurgery: Thoracic Surgery
     Tobacco: Tabak
     TouristInfo: Turist-Information
@@ -1892,7 +1892,7 @@ de:
     Wellness: Wellness
     Ruin: Ruinen
     Stationery: Schreibwaren
-    Nationality: Nationalität
+    Nationality: Nationalit√§t
     Library: Library
     Theatre: Theatre
     Subway: Subway
@@ -1956,3 +1956,4 @@ de:
     Hotels: Hotels
     InformationService: Information Service
     FitnessStudio: Fitness Studio
+
