@@ -1936,7 +1936,7 @@ en:
     Doctor: Doctor
     Cosmetics: Cosmetics
     Castle: Castle
-    Cafe: Café
+    Cafe: Caf√©
     Bowling: Bowling
     GolfCourse: Golf Course
     Hospital: Hospital
@@ -1958,7 +1958,7 @@ en:
     Hostel: Hostel
     Landscape: Landscape
     Bookstore: Bookstore
-    Flower: Flower
+    Flower: Flowers
     Camping: Camping
     CarSharing: Car Sharing
     BusStop: Bus Stop
@@ -2051,16 +2051,16 @@ en:
     Police: Police
     Pizza: Pizza
     Opera: Opera
-    Shoe: Shoe
-    Optician: Optician
-    Toys: Toys
-    PlaceOfInterest: Place of Interest
+    Shoe: Shoes
+    Optician: Opticians
+    Toy: Toys
+    PlaceOfInterest: Places of Interest
     Vegetarian: Vegetarian
-    supermarket: supermarket
+    Supermarket: Supermarket
     Pleasure: Pleasure
     River: River
     Synagogue: Synagogue
-    TravelAgencies: Travel Agencies
+    TravelAgency: Travel Agency
     University: University
     Shopping: Shopping
     Tourism: Tourism
@@ -2096,7 +2096,7 @@ en:
     Butcher: Butcher
     Valley: Valley
     Motel: Motel
-    Hotels: Hotels
+    Hotel: Hotel
     InformationService: Information Service
     FitnessStudio: Fitness Studio
     
