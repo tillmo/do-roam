@@ -1759,6 +1759,14 @@
     
 
 
+    <!-- http://my-ecar.org#Supermarket -->
+
+    <owl:Class rdf:about="#Supermarket">
+        <rdfs:subClassOf rdf:resource="#Shopping"/>
+    </owl:Class>
+    
+
+
     <!-- http://my-ecar.org#Surgery -->
 
     <owl:Class rdf:about="#Surgery">
@@ -1863,9 +1871,9 @@
     
 
 
-    <!-- http://my-ecar.org#Toys -->
+    <!-- http://my-ecar.org#Toy -->
 
-    <owl:Class rdf:about="#Toys">
+    <owl:Class rdf:about="#Toy">
         <rdfs:subClassOf rdf:resource="#Shopping"/>
     </owl:Class>
     
@@ -2019,14 +2027,6 @@
 
     <owl:Class rdf:about="#YouthHostel">
         <rdfs:subClassOf rdf:resource="#Accommodation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://my-ecar.org#supermarket -->
-
-    <owl:Class rdf:about="#supermarket">
-        <rdfs:subClassOf rdf:resource="#Shopping"/>
     </owl:Class>
 </rdf:RDF>
 
