@@ -1714,8 +1714,8 @@ de:
       fail: Konnte die Zuordnung von Benutzer „{{name}}“ zu Rolle „{{role}}“ nicht aufheben. Bitte überprüfe, ob es sich um einen gültigen Benutzer und eine gültige Rolle handelt.
       heading: Bestätige Aufhebung der Rollenzuordnung
       title: Bestätige Aufhebung der Rollenzuordnung
-  
- Albanian: Albanisch
+  ontology:
+    Albanian: Albanisch
     ChargingStation: Ladestation
     Anaesthesiology: Anaesthesiologie
     Angiology: Angiology
@@ -1808,7 +1808,7 @@ de:
     Kindergarten: Kindergarten
     CivilService: Bürgerservice
     Japanese: Japanisch
-    Bakery: Bäkerei
+    Bakery: Bäckerei
     German: Deutsch
     Clothing: Bekleidung
     Fish: Fisch
@@ -1957,3 +1957,4 @@ de:
     InformationService: Information Service
     FitnessStudio: Fitness Studio
 
+    
