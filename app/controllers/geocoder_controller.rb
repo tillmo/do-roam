@@ -9,19 +9,19 @@ class GeocoderController < ApplicationController
   def search
     @query = params[:query]
 
-    w = Word.find_by_lemma(@query.downcase) # WordNet has words in lowercase
+    #w = Word.find_by_lemma(@query.downcase) # WordNet has words in lowercase
 
-    if not w.nil? then
-       wsyns = w.synonyms.map{|x| OntologyClass.find_by_name(x.lemma.capitalize)}
-       wsyns.delete(nil)
-       if wsyns == [] then # no class found
-          render :nothing => true, :status => :bad_request # for now
-       else
-          @classes = wsyns.uniq.map{|x| x.id.to_s}
-          render :js => "classes = \"#{@classes.join(',')}\"; moveend_listener();"
-          return
-       end
-     else
+    #if not w.nil? then
+     #  wsyns = w.synonyms.map{|x| OntologyClass.find_by_name(x.lemma.capitalize)}
+     #  wsyns.delete(nil)
+     #  if wsyns == [] then # no class found
+     #     render :nothing => true, :status => :bad_request # for now
+     #  else
+     #     @classes = wsyns.uniq.map{|x| x.id.to_s}
+     #     render :js => "classes = \"#{@classes.join(',')}\"; moveend_listener();"
+      #    return
+      # end
+     #else
     @sources = Array.new
 
     @query.sub(/^\s+/, "")
@@ -47,7 +47,7 @@ class GeocoderController < ApplicationController
       page.replace_html :sidebar_content, :partial => "search"
       page.call "openSidebar"
     end
-    end #if
+    #end # if
   end
 
   def search_latlon
