@@ -55,21 +55,21 @@ if ! dbexists; then
 	createdb
 fi
 
-# module tables
-#for m in ${modules}; do
-#	sql=${dbtype}-${m}-schema.sql
-#	process ${sql} schema ${db}
-#done
-#for m in ${modules}; do
-#	sql=${dbtype}-${m}-data.sql
-#	process ${sql} data ${db}
-#done
+module tables
+for m in ${modules}; do
+	sql=${dbtype}-${m}-schema.sql
+	process ${sql} schema ${db}
+done
+for m in ${modules}; do
+        sql=${dbtype}-${m}-data.sql
+	process ${sql} data ${db}
+done
 for m in ${modules}; do
 	sql=${dbtype}-${m}-constraints.sql
 	process ${sql} constraints ${db} --force
 done
-#for m in ${modules}; do
-#	sql=${dbtype}-${m}-views.sql
-#	process ${sql} views ${db}
-#done
+for m in ${modules}; do
+	sql=${dbtype}-${m}-views.sql
+	process ${sql} views ${db}
+done
 
