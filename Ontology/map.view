@@ -99,3 +99,4 @@
 (Class InformationService, Class v_service),
 (Class Bowling, Class v_bowls),
 (Role hasCuisine, Role hasCuisine)
+(Class Mailbox, Class v_  )

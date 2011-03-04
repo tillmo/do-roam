@@ -293,9 +293,9 @@
     
 
 
-    <!-- http://my-ecar.org#Brithish -->
+    <!-- http://my-ecar.org#British -->
 
-    <owl:Class rdf:about="#Brithish">
+    <owl:Class rdf:about="#British">
         <rdfs:subClassOf rdf:resource="#Nationality"/>
     </owl:Class>
     
@@ -1111,6 +1111,14 @@
 
     <owl:Class rdf:about="#LiveMusic">
         <rdfs:subClassOf rdf:resource="#Pleasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://my-ecar.org#Mailbox -->
+
+    <owl:Class rdf:about="#Mailbox">
+        <rdfs:subClassOf rdf:resource="#CivilService"/>
     </owl:Class>
     
 
