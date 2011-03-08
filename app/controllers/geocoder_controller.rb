@@ -8,20 +8,44 @@ class GeocoderController < ApplicationController
 
   def search
     @query = params[:query]
+    qterms = @query.split(',')
+    act = qterms.at(0)
+    if act.nil? then # empty string, let osm handle
+      osm_search
+    else
+     w = Word.find_by_lemma(act.downcase)
+     if w.nil? then # the word is not an activity, do standard search
+        osm_search
+     else
+       wsyns = w.synonyms.map{|x| OntologyClass.find_by_name(x.lemma.capitalize)}
+       wsyns.delete(nil)
+      if wsyns == [] then # no class found, do standard search
+        osm_search
+      else
+        #interval search here
+        interv = qterms.at(1)
+        @interval = Interval.new(:start => 0, :stop => 0)
+        if not interv.nil? then
+          # we have a term that might be an interval
+          intlist = Interval.parse_one(interv)
+          if intlist != [] then
+            # we have some intervals, we need to set up parameters
+            @interval = intlist.first.first
+            qterms.delete_at(1)
+          end
+        end
+        @classes = wsyns.uniq.map{|x| x.id.to_s}
+        qterms.delete_at(0)
+        @query = qterms.to_s
+        osm_search
+      end
+     end
+    end
 
-    #w = Word.find_by_lemma(@query.downcase) # WordNet has words in lowercase
+    #osm_search
+  end
 
-    #if not w.nil? then
-     #  wsyns = w.synonyms.map{|x| OntologyClass.find_by_name(x.lemma.capitalize)}
-     #  wsyns.delete(nil)
-     #  if wsyns == [] then # no class found
-     #     render :nothing => true, :status => :bad_request # for now
-     #  else
-     #     @classes = wsyns.uniq.map{|x| x.id.to_s}
-     #     render :js => "classes = \"#{@classes.join(',')}\"; moveend_listener();"
-      #    return
-      # end
-     #else
+  def osm_search
     @sources = Array.new
 
     @query.sub(/^\s+/, "")

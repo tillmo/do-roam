@@ -94,6 +94,7 @@ class Interval < ActiveRecord::Base
   end
   
   def dsfe_many(is)
-    is.any? {|i| self.dsfe(i)}
+    #is.any? {|i| self.dsfe(i)}
+    true
   end
 end

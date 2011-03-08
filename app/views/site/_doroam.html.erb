@@ -36,7 +36,10 @@
     var my_markers = new Array(); // our list of Markers
 
     var classes = "<%= @classes.join(',') %>";
-
+    var intStart = "<%= if !@interval.nil? then @interval.start else 0 end%>";
+    var intStop = "<%= if !@interval.nil? then @interval.stop else 0 end%>";
+     // values should not restrict anything if the interval is nil
+ 
     // Determines if the marker is within the bounds of the visible part of the map at the current zoom level
     function marker_is_in_view(marker) {
 	  var extents = getMapExtent();
@@ -86,18 +89,28 @@
 
       var extents = getMapExtent();
 
-      var url = "/api/0.6/ontosearch?"
+     /* var url = "/api/0.6/ontosearch?"
            + "zoom=" + zoom
            + "&class=" + classes
-           <% if !@interval.nil? then %> 
-		     + "&start=" + "<%= @interval.start %>"
-		     + "&stop=" + "<%= @interval.stop %>"
-		   <% end %>
+           <% if !@interval.nil? then %>
+           + "&start=" + "<%= @interval.start %>"
+	   + "&stop=" + "<%= @interval.stop %>"
+           <% end %>
            + "&minlon=" + extents.left // tlLonLat.lon
            + "&maxlat=" + extents.top // tlLonLat.lat
            + "&minlat=" + extents.bottom // brLonLat.lon
            + "&maxlon=" + extents.right // brLonLat.lat;
+      */
 
+      var url = "/api/0.6/ontosearch?"
+           + "zoom=" + zoom
+           + "&class=" + classes
+           + (intStart=="0" && intStop=="0" ? "" : "&start=" + intStart + "&stop=" + intStop)
+           + "&minlon=" + extents.left // tlLonLat.lon
+           + "&maxlat=" + extents.top // tlLonLat.lat
+           + "&minlat=" + extents.bottom // brLonLat.lon
+           + "&maxlon=" + extents.right // brLonLat.lat;
+      
       // GET and process some markers
       $j.get(url, function(data) {
         // Remove markers that aren't within the bounds of the visible part of the map at the current zoom level

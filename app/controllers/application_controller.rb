@@ -310,7 +310,7 @@ class ApplicationController < ActionController::Base
   end
 
   def prepare_mainpage
-    @main_class = OntologyClass.find_by_name("Activities")
+    @main_class = OntologyClass.find_by_name("Activity")
     if !params[:time].nil? then
       start = params[:day].to_i * Interval::DAY + params[:hour].to_i * 60 + params[:min].to_i * 10
       stop = start + params[:duration_hour].to_i * 60 + params[:duration_min].to_i * 10
