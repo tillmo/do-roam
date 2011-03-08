@@ -4,12 +4,12 @@ namespace :ontology do
     # delete old stuff and read in ontologies
     Ontology.all.each do |o| o.destroy end
     OntologyMapping.all.each do |o| o.destroy end
-    puts "Reading ../MappingFiles/activity-eng.owl"
-    s = Ontology.read_ontology("../MappingFiles/activity-eng.owl","activities")
-    puts "Reading ../MappingFiles/tags.owl"
-    t = Ontology.read_ontology("../MappingFiles/tags.owl","tags")
-    puts "Reading ../MappingFiles/map.view"
-    om = OntologyMapping.read_mapping("../MappingFiles/map.view","activities2tags",s,t)
+    puts "Reading Ontology/activity-eng.owl"
+    s = Ontology.read_ontology("Ontology/activity-eng.owl","activities")
+    puts "Reading Ontology/tags.owl"
+    t = Ontology.read_ontology("Ontology/tags.owl","tags")
+    puts "Reading Ontology/map.view"
+    om = OntologyMapping.read_mapping("Ontology/map.view","activities2tags",s,t)
 
   
   
