@@ -48,6 +48,12 @@ class GeocoderController < ApplicationController
   def osm_search
     @sources = Array.new
 
+    if @query == "" then
+      render :update do
+      end
+      return
+    end
+
     @query.sub(/^\s+/, "")
     @query.sub(/\s+$/, "")
 
