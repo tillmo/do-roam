@@ -9,6 +9,6 @@
     <% end  %>
     <% if @query != "" then %>
     <%=  remote_function :update => "search_#{source}", :url => { :action => "search_#{source}", :query => @query, :minlat => params[:minlat], :minlon => params[:minlon], :maxlat => params[:maxlat], :maxlon => params[:maxlon] }%>
-    <% end  %>
+    <% end %>
   </script>
 <% end %>
