@@ -7,6 +7,8 @@
     <% if not @classes.nil? then %>
     <%=  "classes = \"#{@classes.join(',')}\";intStart = \"#{@interval.start}\";intStop = \"#{@interval.stop}\";moveend_listener();"%>
     <% end  %>
-    <%= remote_function :update => "search_#{source}", :url => { :action => "search_#{source}", :query => @query, :minlat => params[:minlat], :minlon => params[:minlon], :maxlat => params[:maxlat], :maxlon => params[:maxlon] } %>
+    <% if @query != "" then %>
+    <%=  remote_function :update => "search_#{source}", :url => { :action => "search_#{source}", :query => @query, :minlat => params[:minlat], :minlon => params[:minlon], :maxlat => params[:maxlat], :maxlon => params[:maxlon] }%>
+    <% end  %>
   </script>
 <% end %>
