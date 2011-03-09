@@ -62,16 +62,20 @@ class GeocoderController < ApplicationController
     elsif @query.match(/^[A-Z]\d[A-Z]\s*\d[A-Z]\d$/i)
       @sources.push "ca_postcode"
       @sources.push "osm_nominatim"
-    elsif @query != ""
+    else
       @sources.push "osm_nominatim"
       @sources.push "geonames"
     end
 
+    if @query == "" then
+      render :update do |page|
+        page.replace_html :sidebar_content, :partial => "search"
+      end
+    else
     render :update do |page|
       page.replace_html :sidebar_content, :partial => "search"
-      if @query != "" then
        page.call "openSidebar"
-      end
+    end
     end
   end
 
