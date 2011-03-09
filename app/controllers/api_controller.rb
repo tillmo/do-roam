@@ -385,7 +385,9 @@ class ApiController < ApplicationController
          housenumber = if housenumber_tag.nil? then "" else housenumber_tag end
          city_tag = nt.node.tags["addr:city"]
          city = if city_tag.nil? then "" else city_tag end
-         desc = (XML::Node.new('desc') << "#{street} #{housenumber} <br> #{city}")
+         opening_hours_tag = nt.node.tags["opening_hours"]
+         opening_hours = if opening_hours_tag.nil? then "" else opening_hours_tag end
+         desc = (XML::Node.new('desc') << "#{street} #{housenumber} <br> #{city} <br> #{opening_hours}")
          elem << desc
 
          sym = (XML::Node.new('sym') << sub.safe_iconfile) 
