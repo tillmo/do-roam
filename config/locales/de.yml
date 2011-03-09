@@ -1729,7 +1729,7 @@ de:
     Biochemistry: Biochemie
     Bosnian: Bosnisch
     Brazilian: Brasilianisch
-    Brithish: Englisch
+    British: Englisch
     Bulgarian: Bulgarisch
     Burmese: Burmeseisch
     Cameroonian: Kamerunisch
@@ -1761,7 +1761,7 @@ de:
     GeneralPathology: General Pathology
     GeneralRadiology: General Radiology
     GeneralSurgery: General Surgery
-    Georgian: Georgian
+    Georgian: Georgisch
     Gynecology: Gynecology
     HairRemoval: Haarentfernung
     HeartSurgery: Heart Surgery
@@ -1778,19 +1778,19 @@ de:
     Korean: Koreanisch
     LaboratoryMedicine: Laboratory Medicine
     Lake: See
-    Activity: Activität
+    Activity: Aktivität
     Delicatessen: Feinkost
     Food: Lebensmittel
     Accommodation: Unterkunft
-    Leisure: Feizeit
+    Leisure: Freizeit
     Address: Addresse
     Cuisine: Cuisine
-    Electronics: Electronik
+    Electronics: Elektronik
     Forest: Wald
     Climbing: Klettern
     College: Gymnasium
     Gastronomy: Gastronomie
-    Doctor: Arzt
+    Doctor: Ärzte
     Cosmetics: Kosmetik
     Castle: Burg
     Cafe: Café
@@ -1816,7 +1816,7 @@ de:
     Landscape: Landschaft
     Bookstore: Bookstore
     Flower: Floristik
-    Camping: Campinplatz
+    Camping: Campingplatz
     CarSharing: Car Sharing Punkt
     BusStop: Bushaltestelle
     Greek: Griechisch
@@ -1856,11 +1856,11 @@ de:
     PlasticSurgery: Plastic Surgery
     PneumologyANDPulmonaryMedicine: Pneumology & Pulmonary Medicine
     PrimarySchool: Grundschule
-    PrivateSchool: Privat Schule
+    PrivateSchool: Privatschule
     PsychiatryAndPsychotherapy: Psychiatry & Psychotherapy
     RadiationTherapy: Radiation Therapy
     Radiology: Radiology
-    RailStation: Rail Station
+    RailStation: Bahnhof
     Rheumatology: Rheumatology
     Romanian: Rumänisch
     Sandwich: Sandwich
@@ -1895,65 +1895,67 @@ de:
     Nationality: Nationalität
     Library: Library
     Theatre: Theatre
-    Subway: Subway
+    Subway: U-Bahn
     Sushi: Sushi
     Sauna: Sauna
     Restaurant: Restaurant
     Tram: Tram
     Thai: Thai
     Thing: Thing
-    Mexican: Mexican
-    Turkish: Turkish
-    Spanish: Spanish
-    Police: Police
+    Mexican: Mexikanisch
+    Turkish: Türkissh
+    Spanish: Spanisch
+    Police: Polizei
     Pizza: Pizza
     Opera: Opera
-    Shoe: Shoe
-    Optician: Optician
-    Toys: Toys
-    PlaceOfInterest: Place of Interest
-    Vegetarian: Vegetarian
-    supermarket: supermarket
-    Pleasure: Pleasure
-    River: River
+    Shoe: Schuhgeschäft
+    Optician: Optiker
+    Toy: Toys
+    PlaceOfInterest: Sehenswürdigkeiten
+    Vegetarian: Vegetarisch
+    Supermarket: Supermarkt
+    Pleasure: Vergnügen
+    River: Fluss
     Synagogue: Synagogue
-    TravelAgencies: Travel Agencies
-    University: University
+    TravelAgencies: Reisebüro
+    University: Universität
     Shopping: Shopping
-    Tourism: Tourism
+    Tourism: Turismus
     PlaceOfWorship: Place of Worship
-    PublicTransport: Public Transport
-    Pharmacy: Pharmacy
-    Drugstore: Drugstore
-    Guestroom: Guest Room
-    YouthHostel: Youth Hostel
+    PublicTransport: Öffentliche Verkehrsmittel
+    Pharmacy: Apotheke
+    Drugstore: Drogerie
+    Guestroom: Gästezimmer
+    YouthHostel: Jugendherberge
     Minigolf: Minigolf
-    Church: Church
-    Mosque: Mosque
-    Education: Education
-    Health: Health
-    SwimmingPool: Swimming Pool
+    Church: Kirche
+    Mosque: Moschee
+    Education: Bildung
+    Health: Gesundheit
+    SwimmingPool: Schwimmbad
     SportAndFitness: Sport & Fitness
-    OpeningHours: Opening Hours
-    PostOffice: Post Office
-    Furniture: Furniture
-    American: American
+    OpeningHours: Öffnungszeiten
+    PostOffice: Post 
+    Furniture: Einrichtung
+    American: Amerikanisch
     Computer: Computer
     FastFood: Fast Food
-    Parking: Parking
+    Parking: Parkplätze
     Massage: Massage
-    Chinese: Chinese
+    Chinese: Chinesisch
     Soccer: Soccer
     Museum: Museum
-    French: French
-    Dance: Dance
-    Mall: Mall
+    French: Französisch
+    Dance: Tanzen
+    Mall: Einkauszentrum
     Park: Park
-    Finance: Finance
-    Butcher: Butcher
-    Valley: Valley
+    Finance: Finanzen
+    Butcher: Metzger
+    Valley: Tal
     Motel: Motel
-    Hotels: Hotels
+    Hotel: Hotel
     InformationService: Information Service
     FitnessStudio: Fitness Studio
+    Mailbox: Briefkasten
+
     
