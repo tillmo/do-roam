@@ -87,7 +87,7 @@ namespace :ontology do
   icon("Shoe","shoes.png")
   icon("Butcher","butcher.png")  
 
-  icon("Minigolf","minature_golf.png")
+  icon("MiniGolf","minature_golf.png")
   icon("Ruin","ruins.png")
   icon("Leisure","question-mark.png")
   icon("Landscape","question-mark.png")
@@ -119,7 +119,10 @@ namespace :ontology do
   icon("Mailbox","post_box.png")
   icon("School","school.png")
   icon("Exchange","exchange.png")
-  icon("RailStation","trainstation.png") 
+  icon("RailStation","trainstation.png")
+  icon("Pub","pub.png")
+  icon("Bar","bar.png")
+  icon("TouristInfo","information.png")
 
 # not needed
   icon("Address","question-mark.png")

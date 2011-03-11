@@ -229,6 +229,14 @@
     
 
 
+    <!-- http://my-ecar.org#Bar -->
+
+    <owl:Class rdf:about="#Bar">
+        <rdfs:subClassOf rdf:resource="#Gastronomy"/>
+    </owl:Class>
+    
+
+
     <!-- http://my-ecar.org#Belgian -->
 
     <owl:Class rdf:about="#Belgian">
@@ -1563,6 +1571,14 @@
 
     <owl:Class rdf:about="#PsychiatryAndPsychotherapy">
         <rdfs:subClassOf rdf:resource="#Doctor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://my-ecar.org#Pub -->
+
+    <owl:Class rdf:about="#Pub">
+        <rdfs:subClassOf rdf:resource="#Gastronomy"/>
     </owl:Class>
     
 
