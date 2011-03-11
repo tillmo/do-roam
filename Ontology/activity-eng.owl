@@ -1043,9 +1043,9 @@
     
 
 
-    <!-- http://my-ecar.org#Kindergarden -->
+    <!-- http://my-ecar.org#Kindergarten -->
 
-    <owl:Class rdf:about="#Kindergarden">
+    <owl:Class rdf:about="#Kindergarten">
         <rdfs:subClassOf rdf:resource="#Education"/>
     </owl:Class>
     
@@ -1927,9 +1927,9 @@
     
 
 
-    <!-- http://my-ecar.org#Universitiy -->
+    <!-- http://my-ecar.org#University -->
 
-    <owl:Class rdf:about="#Universitiy">
+    <owl:Class rdf:about="#University">
         <rdfs:subClassOf rdf:resource="#Education"/>
     </owl:Class>
     

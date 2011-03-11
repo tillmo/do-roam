@@ -117,6 +117,8 @@ namespace :ontology do
   icon("InformationService","information.png")
   icon("Bowling","bowling.png")
   icon("Mailbox","post_box.png")
+  icon("PrimarySchool","school.png")
+  icon("Exchange","exchange.png")
 
 # not needed
   icon("Address","question-mark.png")
