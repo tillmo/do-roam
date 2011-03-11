@@ -707,9 +707,9 @@
     
 
 
-    <!-- http://my-ecar.org#Flower -->
+    <!-- http://my-ecar.org#Flowers -->
 
-    <owl:Class rdf:about="#Flower">
+    <owl:Class rdf:about="#Flowers">
         <rdfs:subClassOf rdf:resource="#Shopping"/>
     </owl:Class>
     

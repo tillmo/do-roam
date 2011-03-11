@@ -79,7 +79,7 @@ namespace :ontology do
   icon("Indian","restaurant.png")
   icon("Sushi","restaurant.png")
   icon("Pizza","restaurant.png")
-  icon("Sauna","restaurant.png")
+  icon("Sauna","sauna.png")
   icon("Park","park.png")
   icon("Thai","restaurant.png")
   icon("Fish","fish.png")
@@ -116,7 +116,7 @@ namespace :ontology do
   icon("FitnessStudio","fitness.png")
   icon("InformationService","information.png")
   icon("Bowling","bowling.png")
-
+  icon("Mailbox","post_box.png")
 
 # not needed
   icon("Address","question-mark.png")
