@@ -47,7 +47,7 @@ namespace :ontology do
   icon("Parking","parking.png")
   icon("Police","police.png")
   icon("Subway","ubahn.png")
-  icon("Opera","theatre.png")
+  icon("Opera",".png")
   icon("Hairdresser","hairdresser.png")
   icon("Mall","mall.png")
   icon("Toy","toys.png")
