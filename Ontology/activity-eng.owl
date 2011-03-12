@@ -1351,14 +1351,6 @@
     
 
 
-    <!-- http://my-ecar.org#Opera -->
-
-    <owl:Class rdf:about="#Opera">
-        <rdfs:subClassOf rdf:resource="#Leisure"/>
-    </owl:Class>
-    
-
-
     <!-- http://my-ecar.org#Ophthalmology -->
 
     <owl:Class rdf:about="#Ophthalmology">
