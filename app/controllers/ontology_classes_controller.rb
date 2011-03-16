@@ -80,4 +80,12 @@ class OntologyClassesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # list of all icons and the ontology class they stand for
+  def icons
+    @ontology_classes = OntologyClass.all
+    respond_to do |format|
+      format.html # icons.html.erb
+    end
+  end
 end

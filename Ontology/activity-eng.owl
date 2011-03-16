@@ -229,6 +229,14 @@
     
 
 
+    <!-- http://my-ecar.org#Bar -->
+
+    <owl:Class rdf:about="#Bar">
+        <rdfs:subClassOf rdf:resource="#Gastronomy"/>
+    </owl:Class>
+    
+
+
     <!-- http://my-ecar.org#Belgian -->
 
     <owl:Class rdf:about="#Belgian">
@@ -707,9 +715,9 @@
     
 
 
-    <!-- http://my-ecar.org#Flower -->
+    <!-- http://my-ecar.org#Flowers -->
 
-    <owl:Class rdf:about="#Flower">
+    <owl:Class rdf:about="#Flowers">
         <rdfs:subClassOf rdf:resource="#Shopping"/>
     </owl:Class>
     
@@ -1043,9 +1051,9 @@
     
 
 
-    <!-- http://my-ecar.org#Kindergarden -->
+    <!-- http://my-ecar.org#Kindergarten -->
 
-    <owl:Class rdf:about="#Kindergarden">
+    <owl:Class rdf:about="#Kindergarten">
         <rdfs:subClassOf rdf:resource="#Education"/>
     </owl:Class>
     
@@ -1183,6 +1191,14 @@
 
     <owl:Class rdf:about="#MiniGolf">
         <rdfs:subClassOf rdf:resource="#Pleasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://my-ecar.org#MobilePhone -->
+
+    <owl:Class rdf:about="#MobilePhone">
+        <rdfs:subClassOf rdf:resource="#Electronics"/>
     </owl:Class>
     
 
@@ -1343,14 +1359,6 @@
     
 
 
-    <!-- http://my-ecar.org#Opera -->
-
-    <owl:Class rdf:about="#Opera">
-        <rdfs:subClassOf rdf:resource="#Leisure"/>
-    </owl:Class>
-    
-
-
     <!-- http://my-ecar.org#Ophthalmology -->
 
     <owl:Class rdf:about="#Ophthalmology">
@@ -1451,14 +1459,6 @@
 
     <owl:Class rdf:about="#Pharmacy">
         <rdfs:subClassOf rdf:resource="#Health"/>
-    </owl:Class>
-    
-
-
-    <!-- http://my-ecar.org#Phone -->
-
-    <owl:Class rdf:about="#Phone">
-        <rdfs:subClassOf rdf:resource="#Electronics"/>
     </owl:Class>
     
 
@@ -1567,6 +1567,14 @@
     
 
 
+    <!-- http://my-ecar.org#Pub -->
+
+    <owl:Class rdf:about="#Pub">
+        <rdfs:subClassOf rdf:resource="#Gastronomy"/>
+    </owl:Class>
+    
+
+
     <!-- http://my-ecar.org#PublicTransport -->
 
     <owl:Class rdf:about="#PublicTransport">
@@ -1651,6 +1659,14 @@
 
     <owl:Class rdf:about="#Sauna">
         <rdfs:subClassOf rdf:resource="#Wellness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://my-ecar.org#School -->
+
+    <owl:Class rdf:about="#School">
+        <rdfs:subClassOf rdf:resource="#Education"/>
     </owl:Class>
     
 
@@ -1927,9 +1943,9 @@
     
 
 
-    <!-- http://my-ecar.org#Universitiy -->
+    <!-- http://my-ecar.org#University -->
 
-    <owl:Class rdf:about="#Universitiy">
+    <owl:Class rdf:about="#University">
         <rdfs:subClassOf rdf:resource="#Education"/>
     </owl:Class>
     

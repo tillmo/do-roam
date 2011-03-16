@@ -48,12 +48,6 @@ class GeocoderController < ApplicationController
   def osm_search
     @sources = Array.new
 
-    if @query == "" then
-      render :update do
-      end
-      return
-    end
-
     @query.sub(/^\s+/, "")
     @query.sub(/\s+$/, "")
 
@@ -73,11 +67,16 @@ class GeocoderController < ApplicationController
       @sources.push "geonames"
     end
 
+    if @query == "" then
+      render :update do |page|
+        page.replace_html :sidebar_content, :partial => "search"
+      end
+    else
     render :update do |page|
       page.replace_html :sidebar_content, :partial => "search"
-      page.call "openSidebar"
+       page.call "openSidebar"
     end
-    #end # if
+    end
   end
 
   def search_latlon

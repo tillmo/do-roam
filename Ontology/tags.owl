@@ -1045,6 +1045,12 @@
     
 
 
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#k_type -->
+
+    <owl:Class rdf:about="#k_type"/>
+    
+
+
     <!-- http://www.dfki.de/sks/hets/ontology/unamed#k_waterway -->
 
     <owl:Class rdf:about="#k_waterway">
@@ -1369,6 +1375,14 @@
 
     <owl:Class rdf:about="#v_boulevard">
         <rdfs:subClassOf rdf:resource="#k_theatre:genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_boundary -->
+
+    <owl:Class rdf:about="#v_boundary">
+        <rdfs:subClassOf rdf:resource="#k_type"/>
     </owl:Class>
     
 
@@ -2613,6 +2627,14 @@
     
 
 
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_mobile_phone -->
+
+    <owl:Class rdf:about="#v_mobile_phone">
+        <rdfs:subClassOf rdf:resource="#k_shop"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_monitoring_station -->
 
     <owl:Class rdf:about="#v_monitoring_station">
@@ -2681,6 +2703,14 @@
 
     <owl:Class rdf:about="#v_multifaith">
         <rdfs:subClassOf rdf:resource="#k_religion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_multipolygon -->
+
+    <owl:Class rdf:about="#v_multipolygon">
+        <rdfs:subClassOf rdf:resource="#k_type"/>
     </owl:Class>
     
 
@@ -3157,6 +3187,14 @@
     
 
 
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_restriction -->
+
+    <owl:Class rdf:about="#v_restriction">
+        <rdfs:subClassOf rdf:resource="#k_type"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_river -->
 
     <owl:Class rdf:about="#v_river">
@@ -3193,6 +3231,14 @@
 
     <owl:Class rdf:about="#v_rocks">
         <rdfs:subClassOf rdf:resource="#k_natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_route -->
+
+    <owl:Class rdf:about="#v_route">
+        <rdfs:subClassOf rdf:resource="#k_type"/>
     </owl:Class>
     
 
@@ -3345,6 +3391,14 @@
 
     <owl:Class rdf:about="#v_sikh">
         <rdfs:subClassOf rdf:resource="#k_religion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_site -->
+
+    <owl:Class rdf:about="#v_site">
+        <rdfs:subClassOf rdf:resource="#k_type"/>
     </owl:Class>
     
 

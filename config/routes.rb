@@ -91,6 +91,9 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/browse/changesets', :controller => 'changeset', :action => 'list'
   map.connect '/browse', :controller => 'changeset', :action => 'list'
 
+  # Icons
+  map.connect '/icons', :controller => 'ontology_classes', :action => 'icons'
+
   # web site
   map.root :controller => 'site', :action => 'index'
   map.connect '/', :controller => 'site', :action => 'index'
