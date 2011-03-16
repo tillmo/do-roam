@@ -1,24 +1,9 @@
 # Description
 
-This is the Rails port. The Ruby on Rails application that powers
-http://www.openstreetmap.org.
+DO-ROAM - Activity-Oriented Search and Navigation with OpenStreetMap (http://do-roam.org)
 
-# Running it
+DO-ROAM is based on the Rails port (the Ruby on Rails application that powers
+http://www.openstreetmap.org). See http://wiki.openstreetmap.org/wiki/The_Rails_Port on how to setup and run the rails port.
 
-You can find documentation on how to setup and run the software on the
-OpenStreetMap wiki:
-
-* http://wiki.openstreetmap.org/wiki/The_Rails_Port
+More info on how to setup DO-ROAM coming here soon.
     
-# Hacking it
-
-The canonnical Git repository for this software is hosted at
-git.openstreetmap.org:
-
-* http://git.openstreetmap.org/?p=rails.git
-    
-See commiting to the rails port on the wiki for getting your patches
-integrated:
-
-* http://wiki.openstreetmap.org/wiki/Committing_to_the_rails_port
-
