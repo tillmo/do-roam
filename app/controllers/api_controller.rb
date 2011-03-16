@@ -386,7 +386,7 @@ class ApiController < ApplicationController
          city_tag = nt.node.tags["addr:city"]
          city = if city_tag.nil? then "" else city_tag end
          opening_hours_tag = nt.node.tags["opening_hours"]
-         opening_hours = if opening_hours_tag.nil? then "" else opening_hours_tag end
+         opening_hours = if opening_hours_tag.nil? then "" else opening_hours_tag.gsub(/;/,"<br />") end
          desc = (XML::Node.new('desc') << "#{street} #{housenumber} <br> #{city} <br> #{opening_hours}")
          elem << desc
 

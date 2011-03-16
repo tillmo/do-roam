@@ -1715,6 +1715,9 @@ de:
       heading: Bestätige Aufhebung der Rollenzuordnung
       title: Bestätige Aufhebung der Rollenzuordnung
   ontology:
+    restrict_to_time: Einschränken auf Uhrzeit
+    duration: Dauer
+    all_activities: Alle Aktivitäten
     Albanian: Albanisch
     ChargingStation: Ladestation
     Anaesthesiology: Anaesthesiologie
