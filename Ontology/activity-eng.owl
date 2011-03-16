@@ -1195,6 +1195,14 @@
     
 
 
+    <!-- http://my-ecar.org#MobilePhone -->
+
+    <owl:Class rdf:about="#MobilePhone">
+        <rdfs:subClassOf rdf:resource="#Electronics"/>
+    </owl:Class>
+    
+
+
     <!-- http://my-ecar.org#Mosque -->
 
     <owl:Class rdf:about="#Mosque">
@@ -1451,14 +1459,6 @@
 
     <owl:Class rdf:about="#Pharmacy">
         <rdfs:subClassOf rdf:resource="#Health"/>
-    </owl:Class>
-    
-
-
-    <!-- http://my-ecar.org#Phone -->
-
-    <owl:Class rdf:about="#Phone">
-        <rdfs:subClassOf rdf:resource="#Electronics"/>
     </owl:Class>
     
 

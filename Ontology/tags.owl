@@ -2627,6 +2627,14 @@
     
 
 
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_mobile_phone -->
+
+    <owl:Class rdf:about="#v_mobile_phone">
+        <rdfs:subClassOf rdf:resource="#k_shop"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dfki.de/sks/hets/ontology/unamed#v_monitoring_station -->
 
     <owl:Class rdf:about="#v_monitoring_station">

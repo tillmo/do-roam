@@ -103,4 +103,5 @@
 (Class RailStation, Class v_station),
 (Class Bar, Class v_bar),
 (Class Pub, Class v_pub),
-(Class TouristInfo, Class v_information)
+(Class TouristInfo, Class v_information),
+(Class MobilePhone, Class v_mobile_phone)
