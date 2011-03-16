@@ -1717,6 +1717,13 @@ de:
   ontology:
     restrict_to_time: Einschränken auf Uhrzeit
     duration: Dauer
+    mon: Mo
+    tue: Di
+    wed: Mi
+    thu: Do
+    fri: Fr
+    sat: Sa
+    sun: So
     all_activities: Alle Aktivitäten
     Albanian: Albanisch
     ChargingStation: Ladestation

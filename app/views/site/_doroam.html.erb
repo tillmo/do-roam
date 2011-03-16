@@ -199,7 +199,7 @@
   <div>  	         <%= check_box_tag "time", 1, @time %>  <%= t("ontology.restrict_to_time") %>:
   </div> 	
   <div> <small> <%= select_tag "day", 
-               options_for_select([["Mon", 0],["Tue",1],["Wed",2],["Thu",3],["Fri",4],["Sat",5],["Sun",6]], 
+               options_for_select([[t("ontology.mon"), 0],[t("ontology.tue"),1],[t("ontology.wed"),2],[t("ontology.thu"),3],[t("ontology.fri"),4],[t("ontology.sat"),5],[t("ontology.sun"),6]], 
                  [@day.to_i]) %>
 		    <%= select_tag "hour", 
                options_for_select((0..23).map{|i| [i,i]}, 

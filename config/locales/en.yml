@@ -1858,6 +1858,13 @@ en:
       history_disabled_tooltip: Zoom in to view edits for this area
       history_zoom_alert: You must zoom in to view edits for this area
   ontology:
+    mon: Mon
+    tue: Tue
+    wed: Wed
+    thu: Thu
+    fri: Fri
+    sat: Sat
+    sun: Sun
     restrict_to_time: Restrict to time
     duration: Duration
     all_activities: All activities
