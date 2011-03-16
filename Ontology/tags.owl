@@ -60,6 +60,21 @@
     
 
 
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#ATM -->
+
+    <owl:Class rdf:about="#ATM">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#k_atm_v_yes"/>
+                    <rdf:Description rdf:about="#v_atm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.dfki.de/sks/hets/ontology/unamed#ActivityTags -->
 
     <owl:Class rdf:about="#ActivityTags">
@@ -665,6 +680,20 @@
 
     <owl:Class rdf:about="#k_amenity">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#k_atm -->
+
+    <owl:Class rdf:about="#k_atm"/>
+    
+
+
+    <!-- http://www.dfki.de/sks/hets/ontology/unamed#k_atm_v_yes -->
+
+    <owl:Class rdf:about="#k_atm_v_yes">
+        <rdfs:subClassOf rdf:resource="#k_atm"/>
     </owl:Class>
     
 
