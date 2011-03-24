@@ -329,9 +329,6 @@ class ApiController < ApplicationController
     cids = params[:class].split(',')
     om = OntologyMapping.find_by_name("activities2tags")
 
-    cids.each do |cid|
-    c = OntologyClass.find_by_id(cid.to_i)
-
     start = params[:start]
     stop = params[:stop]
     minlon = params[:minlon].to_f
@@ -349,51 +346,54 @@ class ApiController < ApplicationController
       return
     end
 
-    # get all the points
+    cids.each do |cid|
+      c = OntologyClass.find_by_id(cid.to_i)
 
-    for sub in c.descendants.select{|x| x.safe_iconfile!="question-mark.png"} # .select{|x| x.interesting(om)}
-      search = om.nodetags_search(sub) # different queries
-      if search.nil? 
-        nts = []
-      else  
-        key = search.first[0]
-        val = search.first[1]
-        # get nodetags for class sub whose nodes are within the bounds
-        # TODO: perhaps get all nodetags for all classes at once? 
-        nts = NodeTag.find(:all,:conditions=>OSM.sql_for_area(minlat, minlon, maxlat, maxlon,"current_nodes.")+" AND (\"current_node_tags\".\"#{key}\" = '#{val}')",:include=>"node")
-        if !start.nil? and !stop.nil? then
-          # TODO: optimise this using database queries, similar to those (but be aware of duplicate use to NodeTag that is needed):
-          # Interval.find(:all,:conditions => ["start <=  ? and stop >= ?",start,stop])
-          # positions = Positions.find :all, :conditions => ['id in (?)', nts.map(&:id)]
-          i = Interval.new(:start=>start,:stop=>stop)
-          nts = nts.select{|nt| i.dsfe_many(nt.intervals)}
+      # get all the points
+
+      for sub in c.descendants.select{|x| x.safe_iconfile!="question-mark.png"} # .select{|x| x.interesting(om)}
+        search = om.nodetags_search(sub) # different queries
+        if search.nil? 
+          nts = []
+        else  
+          field_name = search.first[0]
+          val = search.first[1]
+          # get nodetags for class sub whose nodes are within the bounds
+          # TODO: perhaps get all nodetags for all classes at once? 
+          nts = NodeTag.find(:all,:conditions=>OSM.sql_for_area(minlat, minlon, maxlat, maxlon,"current_nodes.")+" AND (\"current_node_tags\".\"#{field_name}\" = '#{val}')",:include=>"node")
+          if !start.nil? and !stop.nil? then
+            # TODO: optimise this using database queries, similar to those (but be aware of duplicate use to NodeTag that is needed):
+            # Interval.find(:all,:conditions => ["start <=  ? and stop >= ?",start,stop])
+            # positions = Positions.find :all, :conditions => ['id in (?)', nts.map(&:id)]
+            i = Interval.new(:start=>start,:stop=>stop)
+            nts = nts.select{|nt| i.dsfe_many(nt.intervals)}
+          end
+        end
+        for nt in nts 
+           elem = XML::Node.new 'wpt'
+           elem['lat'] = nt.node.lat.to_s
+           elem['lon'] = nt.node.lon.to_s
+           doc.root << elem
+  
+           name_tag = nt.node.tags["name"]
+           ename = (XML::Node.new('name') << if name_tag.nil? then "" else name_tag end)
+           elem << ename
+ 
+           street_tag = nt.node.tags["addr:street"]
+           street = if street_tag.nil? then "" else street_tag end
+           housenumber_tag = nt.node.tags["addr:housenumber"]
+           housenumber = if housenumber_tag.nil? then "" else housenumber_tag end
+           city_tag = nt.node.tags["addr:city"]
+           city = if city_tag.nil? then "" else city_tag end
+           opening_hours_tag = nt.node.tags["opening_hours"]
+           opening_hours = if opening_hours_tag.nil? then "" else opening_hours_tag.gsub(/;/,"<br />") end
+           desc = (XML::Node.new('desc') << "#{street} #{housenumber} <br> #{city} <br> #{opening_hours}")
+           elem << desc
+
+           sym = (XML::Node.new('sym') << sub.safe_iconfile) 
+           elem << sym
         end
       end
-      for nt in nts 
-         elem = XML::Node.new 'wpt'
-         elem['lat'] = nt.node.lat.to_s
-         elem['lon'] = nt.node.lon.to_s
-         doc.root << elem
-
-         name_tag = nt.node.tags["name"]
-         ename = (XML::Node.new('name') << if name_tag.nil? then "" else name_tag end)
-         elem << ename
-
-         street_tag = nt.node.tags["addr:street"]
-         street = if street_tag.nil? then "" else street_tag end
-         housenumber_tag = nt.node.tags["addr:housenumber"]
-         housenumber = if housenumber_tag.nil? then "" else housenumber_tag end
-         city_tag = nt.node.tags["addr:city"]
-         city = if city_tag.nil? then "" else city_tag end
-         opening_hours_tag = nt.node.tags["opening_hours"]
-         opening_hours = if opening_hours_tag.nil? then "" else opening_hours_tag.gsub(/;/,"<br />") end
-         desc = (XML::Node.new('desc') << "#{street} #{housenumber} <br> #{city} <br> #{opening_hours}")
-         elem << desc
-
-         sym = (XML::Node.new('sym') << sub.safe_iconfile) 
-         elem << sym
-      end
-    end
     end
    
     render :text => doc.to_s, :content_type => "text/xml"

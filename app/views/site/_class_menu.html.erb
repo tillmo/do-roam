@@ -1,0 +1,17 @@
+<% if c.interesting %>
+   <li><a> <label for="class_<%= c.id.to_s %>"> 
+             <%= check_box_tag("class[" + c.id.to_s + "]","1",selected_classes.include?(c.id.to_s)) %>
+             <%=  t("ontology.#{c.name}") %> 
+           </label>
+       <% if !c.subclasses.empty? and c.subclasses.map{|x| x.interesting}.any? then %>
+          &nbsp;
+          <%= image_tag("right-arrow.png") %>
+          </a>
+          <ul>
+            <% c.subclasses.each do |sub| %>
+              <%= render :partial => "class_menu", :locals => {:c => sub,:selected_classes => selected_classes} %>
+            <% end %>
+          </ul>
+    <% end %>
+   </li>
+<% end %>

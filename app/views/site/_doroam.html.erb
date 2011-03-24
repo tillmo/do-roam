@@ -185,7 +185,7 @@
 		   <ul id="menu">
            <li><%= check_box_tag("class[" + @main_class.id.to_s + "]")%> <%= t("ontology.all_activities") %></br></li>		   
 		     <% @main_class.subclasses.sort{|c1,c2| c1.name <=> c2.name}.each do |c| %>
-  		         <%= display_class_menu(c,@classes) %>
+                         <%= render :partial => "class_menu", :locals => {:c => c,:selected_classes => @classes} %>
              <% end %>
            </ul>
   </div> 	
