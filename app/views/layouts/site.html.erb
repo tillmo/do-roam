@@ -63,7 +63,6 @@
     </span>
     <% end %>
 	
-   	<% if false %>
     <div>
       <ul id="tabnav">
         <%
@@ -79,6 +78,8 @@
         traceclass = 'active' if params['controller'] == 'trace'
         diaryclass = 'active' if params['controller'] == 'diary_entry'
         %>
+        <li><%= link_to t('layouts.routes'), "http://planning.do-roam.org" %></li>
+   	    <% if false %>
         <li><%= link_to t('layouts.view'), {:controller => 'site', :action => 'index'}, {:id => 'viewanchor', :title => t('layouts.view_tooltip'), :class => viewclass} %></li>
         <li><%= link_to t('layouts.edit'), {:controller => 'site', :action => 'edit'}, {:id => 'editanchor', :title => t('javascripts.site.edit_tooltip'), :class => editclass} %></li>
         <li><%= link_to t('layouts.history'), {:controller => 'changeset', :action => 'list' }, {:id => 'historyanchor', :title => t('javascripts.site.history_tooltip'), :class => historyclass} %></li>
@@ -89,9 +90,9 @@
         <% end %>
         <li><%= link_to t('layouts.gps_traces'), {:controller => 'trace', :action => 'list', :display_name => nil}, {:id => 'traceanchor', :title => t('layouts.gps_traces_tooltip'), :class => traceclass} %></li>
         <li><%= link_to t('layouts.user_diaries'), {:controller => 'diary_entry', :action => 'list', :display_name => nil}, {:id => 'diaryanchor', :title => t('layouts.user_diaries_tooltip'), :class => diaryclass} %></li>
+    	<% end %>
       </ul>
     </div>
-	<% end %>
 
     <div id="editmenu">
       <ul>

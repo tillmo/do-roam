@@ -911,6 +911,7 @@ en:
     logout_tooltip: "Log out"
     log_in: log in
     log_in_tooltip: Log in with an existing account
+    routes: Routes
     sign_up: sign up
     sign_up_tooltip: Create an account for editing
     view: View
