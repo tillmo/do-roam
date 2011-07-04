@@ -946,6 +946,9 @@ de:
     osm_offline: Die OpenStreetMap-Datenbank ist im Moment wegen wichtiger Wartungsarbeiten nicht verfügbar.
     osm_read_only: Die OpenStreetMap-Datenbank ist im Moment wegen wichtiger Wartungsarbeiten im „Nur-Lesen-Modus“.
     routes: Routen
+    ontology: Ontologie
+    impressum: Imprint
+    sources: Quellcode
     sign_up: Registrieren
     sign_up_tooltip: Ein Benutzerkonto zum Daten bearbeiten erstellen
     tag_line: Die freie Wiki-Weltkarte

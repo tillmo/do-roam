@@ -79,6 +79,9 @@
         diaryclass = 'active' if params['controller'] == 'diary_entry'
         %>
         <li><%= link_to t('layouts.routes'), "http://planning.do-roam.org" %></li>
+        <li><%= link_to t('layouts.ontology'), "http://osmonto.do-roam.org" %></li>
+        <li><%= link_to t('layouts.sources'), "https://github.com/tillmo/do-roam" %></li>
+        <li><%= link_to t('layouts.imprint'), {:controller => 'site', :action => 'imprint'} %></li>
    	    <% if false %>
         <li><%= link_to t('layouts.view'), {:controller => 'site', :action => 'index'}, {:id => 'viewanchor', :title => t('layouts.view_tooltip'), :class => viewclass} %></li>
         <li><%= link_to t('layouts.edit'), {:controller => 'site', :action => 'edit'}, {:id => 'editanchor', :title => t('javascripts.site.edit_tooltip'), :class => editclass} %></li>

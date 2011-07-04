@@ -911,7 +911,10 @@ en:
     logout_tooltip: "Log out"
     log_in: log in
     log_in_tooltip: Log in with an existing account
-    routes: Routes
+    routes: Route planning
+    ontology: Ontology
+    imprint: Imprint
+    sources: Source code
     sign_up: sign up
     sign_up_tooltip: Create an account for editing
     view: View

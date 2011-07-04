@@ -127,6 +127,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/create-account.html', :controller => 'user', :action => 'new'
   map.connect '/forgot-password.html', :controller => 'user', :action => 'lost_password'
 
+  map.connect '/imprint', :controller => 'site', :action => 'imprint'
+
   # permalink
   map.connect '/go/:code', :controller => 'site', :action => 'permalink', :code => /[a-zA-Z0-9_@]+[=-]*/
 
